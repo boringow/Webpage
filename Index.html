@@ -15,14 +15,34 @@ href="https://fonts.googleapis.com/css?family=Open Sans">
 	}
 	
 
-	div{
+	body{
 		display:flex;
+		flex-direction:column;
+	}
+
+	
+	h2{
+		order:1;
 	}
 	
-	.ball{
-		size:30px;
-		background-color:#FF7277
-		border-radius:50%;
+	.ball {
+	    width: 40px;
+	    height: 40px;
+	    margin: 50 auto;
+	    position: relative;
+	    background: linear-gradient(
+	      35deg,
+	      #ccffff,
+	      #ffcccc
+	    );
+	    border-radius: 50%;
+	  }
+
+	div{
+	    display:flex;
+            flex-direction:row;
+	    justify-content:flex-start;
+	    order:2;
 	}
 </style>
 
@@ -32,12 +52,17 @@ href="https://fonts.googleapis.com/css?family=Open Sans">
   </head>
   <body>
     	<h1>
-		Hello people! This is my website
+		<center>Hello people! This is my website</center>
     	</h1>
+	<h2>
+		This should have 4 maximum round css elements where I can click.
+	</h2>
 	<div>
 		<p1> My favourite music is <a href="https://www.youtube.com/watch?v=VHoT4N43jK8">this one.</a></p1>
-		<p2 class=ball id=ball1></p2>
+		<button class=ball id=ball1></button>
+		<button class=ball id=ball2></button>
 	</div>
+	
 	  
   <body>
 </html>
