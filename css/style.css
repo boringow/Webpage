@@ -1,0 +1,106 @@
+	body{
+		margin-top:0px;
+		margin-left:0px;
+		margin-right:0px;
+
+		color:lightblue;
+		<!--linear-gradient(#6dc2c6,#f2c494);-->
+	}
+	
+	#facebanner{
+		display: block;
+		width: 250px;
+		height: 250px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:40px;
+		
+		
+	}
+	
+	#faceimage{
+		border-radius:50%;
+		max-width:270px;
+		max-height:250px;
+	}
+	
+	#main_title{
+		font-family: 'Leckerli One', cursive;
+		font-size:60px;
+		text-align:center;
+		color:#38465C;
+		background-color: rgba(130,125,140,0.88);
+		margin-top:0px;
+		padding-top:0px;
+	}
+	
+	p1{
+		display:block;
+		margin:15px 20px 0px 20px;
+		font-family: 'Inter', sans-serif;
+		font-size:20px;
+		color:lightblue;
+	}
+	
+	a{	
+		font-family: 'Inter', sans-serif;
+		color:#A8C3F0;
+	}
+	
+	h1{
+		margin-top:20px;
+		margin-left:15px;
+		margin-bottom:25px;
+		font-family: 'Lobster Two', cursive;
+		font-size:32px;
+	}
+	
+	.title{
+		margin-top:20px;
+		margin-left:15px;
+		margin-bottom:25px;
+		font-family: 'Lobster Two', cursive;
+		font-size:50px;
+	}
+	
+	#presentation_wrapper{
+		background-image: url(../media/htmlimage2.JPG); 
+		background-size: cover;
+		background-attachment: scroll;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	
+	#navigation_wrap{
+		background-color:#666666;
+		position:sticky;
+		height:100%;
+		width:100%;
+		top:0px;
+		
+	}
+	
+
+	
+	#navigation_wrap ul{
+		height:45px;
+		margin:0;
+		display:flex;
+		align-items:center;
+		justify-content:space-around;
+		list-style:none;
+		
+	}
+	
+	#navigation_wrap a{
+		text-decoration:none;
+		text-transform:uppercase;
+	}
+	
+	#body_wrap{
+		display:flex;
+		flex-direction:column;
+		background-color:#006666;
+		width:100vz;
+		height:5000px;
+	}
