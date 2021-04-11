@@ -1,68 +1,157 @@
 <!DOCTYPE html>
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css?family=Open Sans">
+
 <style>
-	h1{
-		font-size:20px;
-		color:red;		
-	}
-	
-	html{
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(#6dc2c6,#f2c494);
-		font-family: "Open Sans",Arial;
-	}
-	
+
 
 	body{
+		margin-top:0px;
+		margin-left:0px;
+		margin-right:0px;
+
+		color:lightblue;
+		<!--linear-gradient(#6dc2c6,#f2c494);-->
+	}
+	
+	#facebanner{
+		display: block;
+		width: 250px;
+		height: 250px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:40px;
+		
+		
+	}
+	
+	#faceimage{
+		border-radius:50%;
+		max-width:270px;
+		max-height:250px;
+	}
+	
+	#main_title{
+		font-family: 'Leckerli One', cursive;
+		font-size:60px;
+		text-align:center;
+		color:#38465C;
+		background-color: rgba(130,125,140,0.88);
+		margin-top:0px;
+		padding-top:0px;
+	}
+	
+	p1{
+		display:block;
+		margin:15px 20px 0px 20px;
+		font-family: 'Inter', sans-serif;
+		font-size:20px;
+		color:lightblue;
+	}
+	
+	a{	
+		font-family: 'Inter', sans-serif;
+		color:#A8C3F0;
+	}
+	
+	h1{
+		margin-top:20px;
+		margin-left:15px;
+		margin-bottom:25px;
+		font-family: 'Lobster Two', cursive;
+		font-size:32px;
+	}
+	
+	.title{
+		margin-top:20px;
+		margin-left:15px;
+		margin-bottom:25px;
+		font-family: 'Lobster Two', cursive;
+		font-size:50px;
+	}
+	
+	#presentation_wrapper{
+		background-image: url(./htmlimage2.JPG); 
+		background-size: cover;
+		background-attachment: scroll;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	
+	#navigation_wrap{
+		background-color:#666666;
+		position:sticky;
+		height:100%;
+		width:100%;
+		top:0px;
+		
+	}
+	
+
+	
+	#navigation_wrap ul{
+		height:45px;
+		margin:0;
+		display:flex;
+		align-items:center;
+		justify-content:space-around;
+		list-style:none;
+		
+	}
+	
+	#navigation_wrap a{
+		text-decoration:none;
+		text-transform:uppercase;
+	}
+	
+	#body_wrap{
 		display:flex;
 		flex-direction:column;
-	}
-
-	
-	h2{
-		order:1;
+		background-color:#006666;
+		width:100vz;
+		height:5000px;
 	}
 	
-	.ball {
-	    width: 40px;
-	    height: 40px;
-	    margin: 50 auto;
-	    position: relative;
-	    background: linear-gradient(
-	      35deg,
-	      #ccffff,
-	      #ffcccc
-	    );
-	    border-radius: 50%;
-	  }
 
-	div{
-	    display:flex;
-            flex-direction:row;
-	    justify-content:space-around;
-	    order:2;
-	}
 </style>
 
 <html>
   <head>
-
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter&family=Kaushan+Script&family=Leckerli+One&family=Lobster+Two&family=Pacifico&display=swap" rel="stylesheet"> 
   </head>
   <body>
-    	<h1>
-		<center>Hello people! This is my website</center>
-    	</h1>
-	<h2>
-		This should have 4 maximum round css elements where I can click.
-	</h2>
-	<div>
-		<p1> My favourite music is <a href="https://www.youtube.com/watch?v=VHoT4N43jK8">this one.</a></p1>
-		<button class=ball id=ball1></button>
-		<button class=ball id=ball2></button>
+  <div id=presentation_wrapper>
+	  <header id=main_title>Welcome to my website!</header>
+		<div id=facebanner>
+			<img id=faceimage src='./HTML5.jpg'></img>
+		</div>
+		<h1> About me </h1>
+		<p1> I am Borin, a Spanish guy from the small city of Girona. I like chess, freediving, yoga, calistenichs and small motorbikes. I will become an ATSEP
+			some day, that is my main goal in life.
+			<br>My favourite music is <a href="https://www.youtube.com/watch?v=VHoT4N43jK8">this one.</a>
+			and now I should add a small resume for myself.		
+			<br><br>
+		</p1>
 	</div>
-	
-	  
+	<div id='navigation_wrap'>
+		<nav>
+			<ul>
+				<li><a href='#roots'>My roots</a></li>
+				<li><a href='#blog'>Blog</a></li>
+				<li><a href='#contact'>Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id='body_wrap'>
+		<div>
+			<h1 id='roots' class=title> My roots</h1>
+		</div>
+		<div>
+			<h1 id='blog' class=title> Blog</h1>
+		</div>
+		<div>
+			<h1 id='contact' class=title> Contact</h1>
+		</div>
+		<div></div>
+	</div>
   <body>
 </html>
