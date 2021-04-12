@@ -6,3 +6,6 @@ https://css-tricks.com/a-new-way-to-delay-keyframes-animations/
 
 curtains
 https://css-tricks.com/creating-css-sliding-door-effect/
+
+SUPER  drop shadoqw
+https://css-irl.info/drop-shadow-the-underrated-css-filter/
