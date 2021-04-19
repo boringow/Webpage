@@ -1,36 +1,106 @@
 <!DOCTYPE html>
+
+<style>
+
+</style>
+
 <html>
   <head>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter&family=Kaushan+Script&family=Leckerli+One&family=Lobster+Two&family=Pacifico&display=swap" rel="stylesheet"> 
-  	<link rel='stylesheet' href='./css/style.css'>
-</head>
+	<link rel='stylesheet' href='./css/style.css'>
+  </head>
   <body>
   <div id=presentation_wrapper>
 	  <header id=main_title>Welcome to my website!</header>
 		<div id=facebanner>
 			<img id=faceimage src='./media/HTML5.jpg'></img>
 		</div>
-		<h1> About me </h1>
-		<p1> I am Borin, a Spanish guy from the small city of Girona. I like chess, freediving, yoga, calistenichs and small motorbikes. I will become an ATSEP
-			some day, that is my main goal in life.
-			<br>My favourite music is <a href="https://www.youtube.com/watch?v=VHoT4N43jK8">this one.</a>
-			and now I should add a small resume for myself.		
-			<br><br>
+					<br><br>
+			<br>	
+		<h1><u> This picture </u></h1>
+		<p1> Was taken in Argentina. Probably in the most remote place I have been in my life, at <a href='https://www.google.com/maps/place/Cerro+Torre/@-49.3092369,-73.1167582,12.01z/data=!4m5!3m4!1s0xbdbd1a5ca3cea471:0xea66ea4da2e08fc9!8m2!3d-49.2930859!4d-73.0979198?hl=es' target='blank'>Cerro Torre.</a> From my father's side, all my family is from Argentina.		
+		
 		</p1>
+		<br>
 	</div>
 	<div id='navigation_wrap'>
 		<nav>
 			<ul>
-				<li><a href='#roots'>My roots</a></li>
+				<li><a href='#aboutme'>About me</a></li>
+				<li><a href='#keypeople'>Key people</a></li>
 				<li><a href='#blog'>Blog</a></li>
 				<li><a href='#contact'>Contact</a></li>
 			</ul>
 		</nav>
 	</div>
 	<div id='body_wrap'>
+		<div id='slider'>
+			<input type='radio' name='slider' id='slide1' checked></input>
+			<input type='radio' name='slider' id='slide2'></input>
+			<input type='radio' name='slider' id='slide3'></input>
+			<div id='slides'>
+				<div id='overflow'>
+					<div class='inner'>
+						<div class='slide slide_1'>
+							<div class='slide_content'>
+								<h2>Costa Brava</h2>
+								<p1>The paradise where I come from</p1>
+								<!--<img src='./media/costabrava.jpg' alt=''></img>-->
+							</div>
+						</div>
+						<div class='slide slide_2'>
+							<div class='slide_content'>
+								<h2>Sports</h2>
+								<p1>I can't stay still. I do calisthenics, yoga, snowboarding....</p1>
+								<!--<img src='./media/costabrava.jpg' alt=''></img>-->
+							</div>
+						</div>
+						<div class='slide slide_3'>
+							<div class='slide_content'>
+								<h2>My friends</h2>
+								<p1>They have shaped me to become the person that I am</p1>
+								<!--<img src='./media/costabrava.jpg' alt=''></img>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='controls'>
+				<label for='slide1'></label>
+				<label for='slide2'></label>
+				<label for='slide3'></label>
+			</div>
+			<div id='bullets'>
+				<label for='slide1'></label>
+				<label for='slide2'></label>
+				<label for='slide3'></label>
+			</div>
+			</div>
+			<div id='resume'>
+			<h1 id='aboutme' class=title>About me</h1>
+			<h2></h2>
+			<p1><i>A small biography</i> </p1>
+			<p1>Coming from a Spanish mother and an Argentinian father, I was born the Saturday 5th December of 1998 in Perpignan, France, with a twin brother. I have a sister as well who is a year older than us. We had a fantastic childhood 
+			in the small village of Sant Hilari Sacalm. I was the kind of kid that never studied and had remarkable results. <hr> Most of my childhood I spent it playing videogames such as Dofus or Call of Duty.
+			Another big part of my childhood was spent just enjoying it: hanging out with friends, riding the bike, skateboarding, going to the pool...  I also did basketball, drama, artistic
+			roller-skating and played chess in the school club. I was the 7th best chess player in Catalonia when I was 12 years old. <hr>
+			After I finished highschool I had my worst 4 years in my life, at university. I lived just to study, and to be honest, I am not a good student. I had never studied in my life until I started my bachelor's degree.
+			I am a pragmatic person so to learn and have real, lasting knowledge I must apply what I am learning on a blackboard. These 4 years of study could be summed up in a rush of engineering subjects not giving enough 
+			time to retain everything on your brain so that you end up with a lot of superficial knowledge. Knowing a tiny something about everything. <hr> On November 2019 I saw the awful truth about studies. Even if you work hard enough, it does not matter, 
+			university is NOT going to help you more than just posting a poor "job oportunity" website that has been designed without love in a matter of minutes. Where is the link then between students and real world?
+			the link is on traineeships. <hr> On February 2020, just before the Covid-19 hit Europe I had the honour and pleasure to join Eurocontrol as a trainee. Right now I am in the Surveillance unit (NMD/INF/CNS which means
+			Network Manager Directorate/INFrastructure/Communication Navigation and Surveillance), dealing with data analysis from all kind of surveillance systems.<hr>
+			but mainly dealing with Mode S. </p1>
+			<p1><i>Personality</i> </p1>
+			<p1> I define myself as a curious and optimistic person. I prefer to work alone than with people, and I appreciate loneliness a lot. I thrive for the sense of nothingness that you can get travelling to remote places or doing freediving.
+			
+			My favourite music is <a href="https://www.youtube.com/watch?v=VHoT4N43jK8">this one.</a>
+			and now I should add a small resume for myself.		 </p1>
+		</div>
 		<div>
-			<h1 id='roots' class=title> My roots</h1>
+			<h1 id='keypeople' class=title>Key people</h1>
+			<p1><i>"Tell me who your friends are and I'll tell you who you are"</i> </p1>
 		</div>
 		<div>
 			<h1 id='blog' class=title> Blog</h1>
@@ -38,7 +108,8 @@
 		<div>
 			<h1 id='contact' class=title> Contact</h1>
 		</div>
-		<div></div>
-	</div>
-  <body>
+		</div>
+	<body>
 </html>
+
+
