@@ -53,21 +53,23 @@ a{
 h1{
 	margin-top:20px;
 	margin-left:15px;
+	margin-right:15px;
 	margin-bottom:25px;
 	font-family: 'Lobster Two', cursive;
 	font-size:32px;
 }
 
 h2{
-	margin-top:20px;
+	margin-top:15px;
 	margin-left:15px;
+	margin-right:15px;
 	margin-bottom:25px;
 	font-family: 'Lobster Two', cursive;
 	font-size:26px;
 }
 
 .title{
-	margin-top:20px;
+	margin-top:15px;
 	margin-left:15px;
 	margin-bottom:25px;
 	font-family: 'Lobster Two', cursive;
@@ -98,6 +100,7 @@ h2{
 	margin:0;
 	display:flex;
 	align-items:center;
+	padding: 0;
 	justify-content:space-around;
 	list-style:none;
 }
@@ -127,13 +130,13 @@ h2{
 	
 }
 
-#aboutme{
+.title{
 	padding-top:20px;
 }
 
 #slider {
    margin: 0 auto;
-   width: clamp(250px,100%,1300px);/**/
+   width: 100%;/*clamp(250px,100%,1300px)*/
    max-width: 100%;
    text-align: center;
 }
@@ -151,10 +154,14 @@ h2{
    position: relative;
    z-index: 2;
 }
+
+
 #overflow {
    width: 100%;
    overflow: hidden;
+   
 }
+
 #slide1:checked ~ #slides .inner {
    margin-left: 0;
 }
@@ -184,7 +191,10 @@ h2{
 
 
 #slides .slide_1 {
-   background: url(../media/cb6.jpg);
+   background: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5)
+    ), url(../media/cb6.jpg);
    background-size: cover;
 }
 
@@ -223,6 +233,7 @@ h2{
    z-index: 3;/**/
    position: relative;
 }
+
 #controls label {
    transition: opacity 0.2s ease-out;
    display: none;
@@ -230,15 +241,17 @@ h2{
    height: 50px;
    opacity: .3;
 }
+
 #controls label:hover {
    opacity: 1;
 }
+
 #slide1:checked ~ #controls label:nth-child(2),
 #slide2:checked ~ #controls label:nth-child(3),
 #slide3:checked ~ #controls label:nth-child(1){
    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
    float:right;
-   margin: 0 0 0 0;
+   margin: 0 5px 0 0;
    display: block;
 }
 #slide1:checked ~ #controls label:nth-last-child(1),
@@ -246,7 +259,7 @@ h2{
 #slide3:checked ~ #controls label:nth-last-child(2) {
    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
    float:left;
-   margin: 0 0 0 0;/*0 0 0 0 -50px*/
+   margin: 0 0 0 5px;/*0 0 0 0 -50px*/
    display: block;
 }
 #bullets {
@@ -275,6 +288,7 @@ h2{
 }
 
 textarea{
+	font-family: 'Inter', sans-serif;
 	display:block;
 	margin-left: auto;
     margin-right: auto;
@@ -285,15 +299,28 @@ textarea{
 	resize:none;
 	outline:none;
 	overflow: auto;
+	border-radius: 5px;
 }
 
 button{
+	font-family:'Leckerli One', cursive;
+	font-size:20px;
+	color:lightblue;
 	display:block;
 	margin-right:auto;
 	margin-left:auto;
 	margin-bottom:20px;
-	
+	padding:10px 40px 10px 40px;
+	border-radius: 5% / 100%;/**/
+	background:none;
+	border:solid 2px lightblue;
+	opacity:1;
 	text-align:center;
+}
+
+button:hover {
+     background:black;
+     color:white; 
 }
 
 footer{
@@ -303,12 +330,8 @@ footer{
 
 
 
-.contact_wrapper{
-	
-	
-}
-
 ul {
+	padding: 0;
 	height:45px;
 	margin:0;
 	display:flex;
@@ -319,13 +342,22 @@ ul {
 
 
 
-.fab{
-}
 
+@media screen and (max-width: 750px) {
 
+	html,#body_wrap{
+    width:100%;
+    overflow-x:hidden;
+	}
 
-
-@media screen and (max-width: 700px) {
+	
+    #overflow {
+   width: 100%;
+   overflow-y: hidden;
+   
+	}
+	
+	
    #slide1:checked ~ #controls label:nth-child(2),
    #slide2:checked ~ #controls label:nth-child(3),
    #slide3:checked ~ #controls label:nth-child(1),
@@ -366,16 +398,17 @@ ul {
    display:block;
    margin:15px 20px 0px 20px;
    font-family: 'Inter', sans-serif;
-   font-size:15px;
+   font-size:13px;/*13px*/
    color:lightblue;
    z-index:150;
 	}
+	
 	#slides .slide_2 .slide_content p1{
    margin-top:220px;
    display:block;
    margin:15px 20px 0px 20px;
    font-family: 'Inter', sans-serif;
-   font-size:15px;
+   font-size:13px;/*13px*/
    color:lightblue;
    z-index:150;
 	}
@@ -384,11 +417,47 @@ ul {
    display:block;
    margin:15px 20px 0px 20px;
    font-family: 'Inter', sans-serif;
-   font-size:15px;
+   font-size:13px;/*3vw*/
    color:lightblue;
    z-index:150;
 	}
+		
+
+	#controls {
+	   margin: -225px 0 0 0;/*orig. -180px 0 0 0*/
+	   width: 100%;
+	   height: 50px;
+	   z-index: 3;/**/
+	   position: relative;
+	}
+
+	#controls label {
+	   transition: opacity 0.2s ease-out;
+	   display: none;
+	   width: 50px;
+	   height: 50px;
+	   opacity: 1;
+	}
+
+	#navigation_wrap{
+		background: black;
+		position:sticky;
+		height:100%;
+		width:100%;
+		top:-1px;
+		z-index:5;
+	}
 	
+	#navigation_wrap ul{
+		height:45px;
+		margin:0;
+		display:flex;
+		padding: 0;
+		align-items:center;
+		justify-content:space-around;
+		list-style:none;
+	}
+
 	#navigation_wrap a{
 		color:white;
 		font-weight:bold;
@@ -396,12 +465,26 @@ ul {
 		text-decoration:none;
 		text-transform:uppercase;
 	}
+
+	 #navigation_wrap a:hover{
+		font-size:19px;
+	}
 	
-	#navigation_wrap a:hover{
-		font-size:20px;
+	#body_wrap{
+	display:flex;
+	flex-direction:column;
+	width:100vz;
+	height:100%;
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1235%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M -441.99467267336803%2c287 C -345.99%2c271.4 -153.99%2c169.2 38.005327326631964%2c209 C 230.01%2c248.8 326.01%2c504.2 518.0053273266319%2c486 C 710.01%2c467.8 806.01%2c153.2 998.0053273266319%2c118 C 1190.01%2c82.8 1389.61%2c293.6 1478.005327326632%2c310 C 1566.4%2c326.4 1447.6%2c222 1440%2c200' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -490.1689918674134%2c217 C -394.17%2c268.4 -202.17%2c474.8 -10.168991867413428%2c474 C 181.83%2c473.2 277.83%2c237.2 469.8310081325866%2c213 C 661.83%2c188.8 757.83%2c351 949.8310081325866%2c353 C 1141.83%2c355 1331.8%2c198.6 1429.8310081325865%2c223 C 1527.86%2c247.4 1437.97%2c424.6 1440%2c475' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -160.42447151327264%2c248 C -64.42%2c260.4 127.58%2c338.6 319.57552848672736%2c310 C 511.58%2c281.4 607.58%2c92.6 799.5755284867273%2c105 C 991.58%2c117.4 1087.58%2c358.2 1279.5755284867273%2c372 C 1471.58%2c385.8 1727.49%2c161.8 1759.5755284867273%2c174 C 1791.66%2c186.2 1503.92%2c381.2 1440%2c433' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -194.81018376941563%2c265 C -98.81%2c288.6 93.19%2c382.4 285.18981623058437%2c383 C 477.19%2c383.6 573.19%2c270.6 765.1898162305844%2c268 C 957.19%2c265.4 1053.19%2c410.2 1245.1898162305843%2c370 C 1437.19%2c329.8 1686.23%2c77 1725.1898162305843%2c67 C 1764.15%2c57 1497.04%2c269.4 1440%2c320' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -98.919382667062%2c361 C -2.92%2c316.2 189.08%2c112.4 381.080617332938%2c137 C 573.08%2c161.6 669.08%2c485.4 861.080617332938%2c484 C 1053.08%2c482.6 1149.08%2c153.4 1341.080617332938%2c130 C 1533.08%2c106.6 1801.3%2c369.6 1821.080617332938%2c367 C 1840.86%2c364.4 1516.22%2c167 1440%2c117' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -630.6210984400653%2c218 C -534.62%2c259.6 -342.62%2c443.6 -150.6210984400653%2c426 C 41.38%2c408.4 137.38%2c135.6 329.37890155993466%2c130 C 521.38%2c124.4 617.38%2c373 809.3789015599347%2c398 C 1001.38%2c423 1163.25%2c237.6 1289.3789015599348%2c255 C 1415.5%2c272.4 1409.88%2c439 1440%2c485' stroke='rgba(51%2c 121%2c 194%2c 0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1235'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+	background-attachment: fixed;
+	
 	}
 	
 	textarea{
+		font-family: 'Inter', sans-serif;
 		display:block;
 		margin-left: auto;
 		margin-right: auto;
@@ -412,5 +495,14 @@ ul {
 		resize:none;
 		outline:none;
 		overflow: auto;
+		border-radius: 5px;
 	}
+	
+	/*
+	* {
+	  background: #000 !important;
+	  color: #0f0 !important;
+	  outline: solid #f00 1px !important;
+	}
+	*//*FOR DEBUGGING*/
 }
