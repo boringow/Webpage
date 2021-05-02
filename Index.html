@@ -6,6 +6,7 @@
 
 <html>
   <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter&family=Kaushan+Script&family=Leckerli+One&family=Lobster+Two&family=Pacifico&display=swap"> 
 	<link rel='stylesheet' href='./css/style.css'>
@@ -21,7 +22,7 @@
 
 	<!-- Initialize Firebase -->
 	<script src="/__/firebase/init.js"></script>
-  <div id=presentation_wrapper>
+	<div id=presentation_wrapper>
 	  <header id=main_title>Welcome to my website!</header>
 		<div id=facebanner>
 			<img id=faceimage src='./media/HTML5.jpg'></img>
@@ -94,16 +95,7 @@
 			I joined aerospace systems engineering at UPC in Castelldefels, near Barcelona. I graduated from there the 11th April 2021. The uni experience was probably the worst of my life. I'm not a good student, as I am a pragmatic person and we barely had practical lessons in there.<hr>
 			On February 2020, just before the Covid-19 hit Europe I had the honour and pleasure to join Eurocontrol as a trainee. Right now I am in the Surveillance unit (NMD/INF/CNS which means
 			Network Manager Directorate/INFrastructure/Communication Navigation and Surveillance), dealing with data analysis from all kind of aeronautical surveillance systems.<hr>
-			The 16th April 2021, 1 month and a half before my traineeship ends, I got accepted in ATOS, Eurocontrol's main contractor, to start working full-time in June as a Business Analyst. My first work experience in the field I like! <!--<hr> Most of my childhood I spent it playing videogames such as Dofus or Call of Duty.
-			Another big part of my childhood was spent just enjoying it: hanging out with friends, riding the bike, skateboarding, going to the pool...  I also did basketball, drama, artistic
-			roller-skating and played chess in the school club. I was the 7th best chess player in Catalonia when I was 12 years old. <hr>
-			After I finished highschool I had my worst 4 years in my life, at university. I lived just to study, and to be honest, I am not a good student. I had never studied in my life until I started my bachelor's degree.
-			I am a pragmatic person so to learn and have real, lasting knowledge I must apply what I am learning on a blackboard. These 4 years of study could be summed up in a rush of engineering subjects not giving enough 
-			time to retain everything on your brain so that you end up with a lot of superficial knowledge. Knowing a tiny something about everything. <hr> On November 2019 I saw the awful truth about studies. Even if you work hard enough, it does not matter, 
-			university is NOT going to help you more than just posting a poor "job oportunity" website that has been designed without love in a matter of minutes. Where is the link then between students and real world?
-			the link is on traineeships. <hr> On February 2020, just before the Covid-19 hit Europe I had the honour and pleasure to join Eurocontrol as a trainee. Right now I am in the Surveillance unit (NMD/INF/CNS which means
-			Network Manager Directorate/INFrastructure/Communication Navigation and Surveillance), dealing with data analysis from all kind of surveillance systems.<hr>
-			but mainly dealing with Mode S. --></p1>
+			The 16th April 2021, 1 month and a half before my traineeship ends, I got accepted in ATOS, Eurocontrol's main contractor, to start working full-time in June as a Business Analyst. My first work experience in the field I like!</p1>
 			<br>
 			<br>
 			<h2><i>Personality</i> </h2>
@@ -116,19 +108,24 @@
 			I have an extrange but strong comfortable feeling when it rains heavily and I am listening the rain from home. Seawater is warmer when it rains by the way and there is nothing that seawater cannot heal.<hr>
 			A pair of useful lifehacks I would tell the world is that if you put shaving cream on any glass makes it demisting/defogging and that milk cleans ink from any piece of cloth.
 			My favourite music is <a href="https://www.youtube.com/watch?v=VHoT4N43jK8" target='blank'>this one.</a> Stromae is the best artist of all the times, appart from stromae's music I love techno, electronic music, swing and some french rap.
+			<br>
 			</p1>
+			
+			
 		</div>
 		<!--
 		<div>
 			<h1 id='blog' class=title> Blog</h1>
 		</div>-->
+		
 		<div class='contact_wrapper'>
-			<h1 id='contact' class=title> Contact</h1>
-			<p1>Right below you can fill a message that I will get right into my e-mail. I am also letting my social media links if you want to gossip.</p1>
+		<div id="contact"></div>
+			<h1 class=title> Contact</h1>
+			<p1>Right below you can fill a message that I will get right into my e-mail. I am also letting my social media links in case you want to gossip.</p1>
 			<div class="contactContainer">
-			<form>
-				<textarea name="subject" placeholder="Write something.."></textarea>
-				<button type='submit'>Send E-mail</button>
+			<form action='mailto:borinirob@gmail.com' method="GET">
+				<textarea name="body" placeholder="Write me something.."></textarea>
+				<button type='submit' href='mailto:borinirob@gmail.com' value="Send">Send E-mail</button><!--onclick="location.href='mailto:borinirob@gmail.com';"-->
 			</form>
 			</div>
 		</div>
