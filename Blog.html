@@ -52,9 +52,37 @@
 	<div id='body_wrap'>
 		<div id='resume'>
 			<h1 id='blog' class=title>Blog</h1>
-			<h2><i>Empty blog</i></h2>
-			<p1>This blog is recently new and is empty, but this will change when inspiration will get to my head.</p1>
+			<h2><i>Multilateration (MLAT)</i></h2>
+			<p1>To begin this journey I would like to introduce you to a fantastic localisation technique. It is used on airports around the world, and it was used by 
+			different kinds of navigation systems before the existence of GNSS.
+			</p1>
 			<br>
+			<p1>
+			The principle is quite simple: There is an object (let it be an aircraft) that creates a noise or a signal. This signal is received by different receivers spreaded on the ground
+			and without knowing the initial time of transmission of the signal, we must estimate where the object is located.
+			</p1>
+			<br>
+			<br>
+			<p1>
+			To keep it even more simple, we will deal with a 2D prespective. We know that the first receiver listening the signal is the one closest to the aircraft/emitter, so we take that receiver as a reference.
+			Then, we can receive the same signal emitted from the same aircraft from two other receivers. As they are further away, there will be a small delay on the reception of the signal.
+			</p1>
+			<br>
+			<br>
+			<img src="src='./media/slide1.PNG'" alt="initial problem">
+			<br>
+			<img src="src='./media/Slide2.PNG'" alt="first step of the problem">
+			<br>
+			<p1>Let's see how the intersection of the circles results on the estimation of the emitter position:</p1>
+			<br>
+			<img src="src='./media/Intersection-circles.png'" alt="intersection circles">
+			<br>
+			<p1>What's more important, it is that from the intersecting points of the circle of reference with the other circles creates a hyperbola. From intersection of hyperbolas, we get the estimated position of an emitter/aircraft!!!</p1>
+			<br>
+			<img src="src='./media/loci.gif'" alt="drawing hyperbolas">
+			<br>
+			<p1>And seeing a real case scenario, with 7 receivers (6 hyperbolas):</p1>
+			<img src="src='./media/7Rx.png'" alt="hyperbolas">
 			<br>
 
 		</div>
