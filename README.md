@@ -1,7 +1,7 @@
 # Webpage
 My first HTML5 webpage.
 
-stop bween nimations
+stop between animations
 https://css-tricks.com/a-new-way-to-delay-keyframes-animations/
 
 curtains
