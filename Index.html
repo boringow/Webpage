@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 
-<style>
-
-</style>
-
 <html>
   <head>
 	<title>Borin's website</title>
@@ -14,6 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter&family=Kaushan+Script&family=Leckerli+One&family=Lobster+Two&family=Pacifico&display=swap"> 
+	<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@600&display=swap" rel="stylesheet">
 	<link rel='stylesheet' href='./css/style.css'>
 	<script src="https://kit.fontawesome.com/9494322ed3.js" crossorigin="anonymous"></script>
   </head>
@@ -28,125 +25,112 @@
 	<!-- Initialize Firebase -->
 	<script src="/__/firebase/init.js"></script>
 	<div id=presentation_wrapper>
-	  <header id=main_title>Welcome to my website!</header>
-		<div id=facebanner>
-			<img id=faceimage src='./media/HTML5.jpg'></img>
+	  <header id=main_title>Welcome to my website,</header>
+		<div class=firstflex>
+			<div class="flexItem1">
+				<img id=faceimage src='./media/Borin.jpg'></img>
+			</div>
+			<div class="flexItem2">
+				<h1>About me</h1>
+				<p1>
+					My name is <b>Borin Kaduk Aguilar</b>, born (05/12/98) in <a href="https://goo.gl/maps/aLiW2mANdJXf8bpZ9" target='blank'>Perpignan</a> &#127467;&#127479;, raised in <a href="https://goo.gl/maps/p6nMj7xt6BV2FWz46" target='blank'>Sant Hilari</a> &#127466;&#127480; and currently living in <a href="https://goo.gl/maps/EqemXTPPTCEcBPFJA" target='blank'>Brussels</a>   &#127463;&#127466;. <br> <br> 
+					I am a perpetual learner, passionate about aviation and a philantropist. People see me as a happy guy mostly because of my restless optimism and my high threshold for failure. <br><br>
+					The things I admire the most are art nouveau, doing sports such as artistic gymnastics, yoga or rock climbing and playing chess. <br><br>
+					If you are curious to know a bit more about my personality, my Myers-Briggs indicator is <a href=https://www.16personalities.com/enfj-personality target="blank">ENFJ-A</a> type.
+				</p1>
+			</div>
 		</div>
+		
+		
 					<br><br>
-			<br>	
-		<h1><u> This picture </u></h1>
-		<p1> Was taken in Argentina. Probably in the most remote place I have been in my life, at <a href='https://www.google.com/maps/place/Cerro+Torre/@-49.3092369,-73.1167582,12.01z/data=!4m5!3m4!1s0xbdbd1a5ca3cea471:0xea66ea4da2e08fc9!8m2!3d-49.2930859!4d-73.0979198?hl=es' target='blank'>Cerro Torre.</a> From my father's side, all my family is from Argentina.
-		</p1>
 		<br>
 	</div>
-	<div id='navigation_wrap'>
-		<nav>
-			<ul>
-				<li><a href='#resume'>About me</a></li>
-				<li><a href='./Blog.html'>Blog</a></li>
-				<li><a href='#contact'>Contact</a></li>
-				<li><a href='#main_title'>Scroll to Top</a></li>
-			</ul>
-		</nav>
-	</div>
-	<div id='body_wrap'>
-		<div id='slider'>
-			<input type='radio' name='slider' id='slide1' checked></input>
-			<input type='radio' name='slider' id='slide2'></input>
-			<input type='radio' name='slider' id='slide3'></input>
-			<div id='slides'>
-				<div id='overflow'>
-					<div class='inner'>
-						<div class='slide slide_1'>
-							<div class='slide_content'>
-								<h2>Costa Brava</h2>
-								<p1>The paradise where I come from</p1>
-								<!--<img src='./media/costabrava.jpg' alt=''></img>-->
-							</div>
-						</div>
-						<div class='slide slide_2'>
-							<div class='slide_content'>
-								<h2>Restless</h2>
-								<p1>I can't stay still. I do calisthenics, yoga, snowboarding....</p1>
-								<!--<img src='./media/costabrava.jpg' alt=''></img>-->
-							</div>
-						</div>
-						<div class='slide slide_3'>
-							<div class='slide_content'>
-								<h2>Right now</h2>
-								<p1>I am living in Brussels, this is what I see from my room.</p1>
-								<!--<img src='./media/costabrava.jpg' alt=''></img>-->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id='controls'>
-				<label for='slide1'></label>
-				<label for='slide2'></label>
-				<label for='slide3'></label>
-			</div>
-			<div id='bullets'>
-				<label for='slide1'></label>
-				<label for='slide2'></label>
-				<label for='slide3'></label>
-			</div>
-			</div>
-			<div id='resume'>
-			<h1 id='aboutme' class=title>About me</h1>
-			<h2><i>A small biography</i></h2>
-			<p1>Coming from a Spanish mother and an Argentinian father, I was born the Saturday 5th December of 1998 in Perpignan, France, with a twin brother. I have a sister as well who is a year older than us. We had a fantastic childhood 
-			in the small village of Sant Hilari Sacalm, we spent countless hours playing chess and lots of videogames. <hr> I started working at 17 years old as a receptionist in Platja d'Aro. I can speak catalan, spanish, english and french fluently. Right after finishing highschool at my hometown,	
-			I joined aerospace systems engineering at UPC in Castelldefels, near Barcelona. I graduated from there the 11th April 2021. The uni experience was probably the worst of my life. I'm not a good student, as I am a pragmatic person and we barely had practical lessons in there.<hr>
-			On February 2020, just before the Covid-19 hit Europe I had the honour and pleasure to join Eurocontrol as a trainee. Right now I am in the Surveillance unit (NMD/INF/CNS which means
-			Network Manager Directorate/INFrastructure/Communication Navigation and Surveillance), dealing with data analysis from all kind of aeronautical surveillance systems.<hr>
-			The 16th April 2021, 1 month and a half before my traineeship ends, I got accepted in ATOS, Eurocontrol's main contractor, to start working full-time in June as a Business Analyst. My first work experience in the field I like!</p1>
-			<br>
-			<br>
-			<h2><i>Personality</i> </h2>
-			<p1> I define myself as a curious and optimistic person. When something bad happens to me I focus on what can I do to improve the situation and move forward, without 
-			overthinking or getting stuck in the negativity. Overthinking is probably the worse trap humans turns themselves into. Luckily, my brain automatically avoids that. 
-			Also, I consider myself a really perseverant person, if I want something I will achieve it no matter what. <hr>
-			My humour is a bit different more different than usual. Life should always be taken with a pinch of humour, even on the worst moments.
-			Two values I appreciate a lot in people are discipline and social consciousness. It seems that those two are also the ones that lack the most among nowadays society, or at least from my point of view.
-			I appreciate loneliness a lot. I thrive for the sense of nothingness that you can get travelling to remote places or doing freediving.
-			I have an extrange but strong comfortable feeling when it rains heavily and I am listening the rain from home. Seawater is warmer when it rains by the way and there is nothing that seawater cannot heal.<hr>
-			A pair of useful lifehacks I would tell the world is that if you put shaving cream on any glass makes it demisting/defogging and that milk cleans ink from any piece of cloth.
-			My favourite music is <a href="https://www.youtube.com/watch?v=VHoT4N43jK8" target='blank'>this one.</a> Stromae is the best artist of all the times, appart from stromae's music I love techno, electronic music, swing and some french rap.
-			<br>
+	
+
+	<div class="body_wrapper">
+		<br>
+		<div class="years" id="year2023">2023</div>
+		<hr>
+
+		<div class="years" id="year2022">2022</div>
+			
+			<br><br><br>
+			
+			<div>
+			<h2>September 2022</h2>
+			<p1>
+				I decided to start a master in management at <a href="https://www.vub.be/en" target="blank">VUB</a>. <br><br>
+				The decision was taken to mix my knowledge in engineering with social sciences.
+				Society encourages people having masters, and every time more and more a master is easier to get. It's my turn now to get it, let's see what do I learn from it. 
 			</p1>
-			
-			
-		</div>
-		<!--
-		<div>
-			<h1 id='blog' class=title> Blog</h1>
-		</div>-->
-		
-		<div class='contact_wrapper'>
-		<div id="contact"></div>
-			<h1 class=title> Contact</h1>
-			<p1>Right below you can fill a message that I will get right into my e-mail. I am also letting my social media links in case you want to gossip.</p1>
-			<div class="contactContainer">
-			<form action='mailto:borinirob@gmail.com' method="GET">
-				<textarea name="body" placeholder="Write me something.."></textarea>
-				<button type='submit' href='mailto:borinirob@gmail.com' value="Send">Send E-mail</button><!--onclick="location.href='mailto:borinirob@gmail.com';"-->
-			</form>
 			</div>
-		</div>
-	<footer>
-			<div class="socialMediaContainer">
+			<br><br><br>
+
+
+			<h2>June 2022</h2>
+			<div class="imagecontainer"><img class="object-fit-cover" src="./media/saotome_web/SaoTome1.jpg"></div>
+			<p1>Sometime back in 2019, while working in Centervol's CAMO, a helicopter came inside a container from Sao Tome e Principe. I never heard the name of that country, but when I googled it, I discovered the most amazing place in the planet. <br><br>
+				As an enthusiast of remote places, I decided to take a flight there the first time I receive a double pay. That happened on December 2021 and I bought a plane ticket from 28/05/2022 to 11/06/2022. <br><br>
+				I am well aware that a website must be graphic and too much text is a killer of the narrow attention-span the average human has. That's why I will try to keep it short and show some images about the trip.
+			</p1>
+			<br><br><br>
+			
+			<h2>March 2022</h2>
+			<div class="imagecontainer"><img class="object-fit-cover" src="./media/Flyin_Web.jpg"></div>
+			<p1>I just joined a flying club in Saint Ghislain to learn how to fly an airplane. Prices are democratic and my instructor, Damien, holds 7.000 flight hours.
+			</p1>
+		
+		<hr>
+
+		<div class="years" id="year2021">2021</div>
+		<!--
+		<h2>Summary of the year:</h2>
+			This year, I learnt:
 			<ul>
-				<li><a href="https://twitter.com/borinkaduk" target='blank'><i class="fab fa-twitter fa-2x"></i></a></li>
+				<li> Working experience is way more valuable than university studies.
+				</li>
+				<li> How to create a website.
+				</li>
+				<li> That many people are in a relationship because they cannot be alone.
+				</li>
+				<li> To do a backflip.
+				</li>
+				<li> That most adults are kids in grown up bodies.
+				</li>
+			</ul>
+		-->
+
+		<br><br><br>
+		<h2>May 2021</h2>
+		<p1>Everyone's life is shaped with all decisions you decide to take or not take.
+		<br>
+			 Right before my traineeship ends at Eurocontrol, I got offered a nice position as an ATSEP at the Ireland Aviation Authority at the same time they offered me to continue working as a contractor at Eurocontrol. <br><br>
+			 Although the salary in Ireland is a bit higher, I decide to continue at Eurocontrol because of one main reason: I do not want to focus already in a single field on the vast world of aviation. Within Eurocontrol's data services team 
+			 I have the opportunity to work with different units at the same time, getting a broader picture of the whole aviation ecosystem.
+
+		</p1>
+		<h2>February 2021</h2>
+		<p1>I created this webpage to learn a bit about web developing and web hosting. It is quite simple and it will serve as a small auto-biography, where I dump my thoughts and life-experiences in here.</p1>
+
+		<hr>
+		
+
+	</div>
+
+	<footer>
+		<div class="socialMediaContainer">
+			<ul>
+				<li><a href="https://www.linkedin.com/in/borin-kaduk-aguilar/" target='blank'><i class="fab fa-linkedin-in fa-2x"></i></a></li>
 				<li><a href="https://www.instagram.com/boringoo/" target='blank'><i class="fab fa-instagram fa-2x"></i></a></li>
 				<li><a href="https://www.facebook.com/borin.kadukaguilar/" target='blank'><i class="fab fa-facebook-f fa-2x"></i></a></li>
+				<li><a href="https://twitter.com/borinkaduk" target='blank'><i class="fab fa-twitter fa-2x"></i></a></li>
 				<li><a href="https://github.com/boringow" target='blank'><i class="fab fa-github fa-2x"></i></a></li>
 				<li><a href="https://www.freecodecamp.org/borin" target='blank'><i class="fab fa-free-code-camp fa-2x"></i></a></li>
-				<li><a href="https://www.linkedin.com/in/borin-kaduk-aguilar/" target='blank'><i class="fab fa-linkedin-in fa-2x"></i></a></li>
 			</ul>
-			</div>
+		</div>
+		<div id="contact">You can reach me out sending an e-mail to: borinirob@gmail.com</div>
 	</footer>
-	</body>
+  </body>
 </html>
 
 
