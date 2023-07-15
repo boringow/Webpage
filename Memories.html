@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+	<title>Borin's website</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./media/favicon-16x16.png">
+	<link rel="manifest" href="./media/site.webmanifest">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- Font types -->
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital@1&family=Roboto+Mono&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='./css/style.css'>
+	<style>
+		html {
+			scroll-behavior: smooth;
+  		}
+
+  
+		body{
+			margin-top:0px;
+			margin-left:0px;
+			margin-right:0px;
+			margin-bottom:0px;
+			background:#281801;
+			font-family: 'Roboto Mono', sans-serif;
+			font-size:12px;
+			color:#e08a34;
+			/*linear-gradient(90deg, #333333,#3f4e59);*/
+		}
+
+		#presentation_flex {
+			display: flex;
+			flex-direction: column;
+		}
+
+
+		p1{
+			font-size:2.7vmin;
+		}
+
+
+		.menu {
+			margin: auto;
+			width: 80%;
+			top: 0;
+			background-color: #f4a250;
+			color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		/* Style for the menu items */
+		.menu ul {
+			display:flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-content: stretch;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu li {
+			display: inline-block;
+		}
+
+		.menu li a {
+			display: block;
+			color: #63331d;
+			text-align: center;
+			text-decoration: none;
+			font-size: 2.8vmin;
+			padding: 5px 7vmin;
+		}
+
+		.menu li a:hover {
+			background-color: #8a3232b2;
+			border-radius: 10px;
+		}
+
+		.gallery {
+			display: flex;
+			padding: 2px;
+			transition: 0.3s;
+		}
+		.gallery:hover .gallery__image {
+			filter: grayscale(1);
+		}
+		.gallery__column {
+			display: flex;
+			flex-direction: column;
+			width: 25%;
+		}
+		.gallery__link {
+			margin: 2px;
+			overflow: hidden;
+		}
+		.gallery__link:hover .gallery__image {
+			filter: grayscale(0);
+		}
+		.gallery__link:hover .gallery__caption {
+			opacity: 1;
+		}
+		.gallery__thumb {
+			position: relative;
+		}
+		.gallery__image {
+			display: block;
+			width: 100%;
+			transition: 0.3s;
+		}
+		.gallery__image:hover {
+			transform: scale(1.1);
+		}
+		.gallery__caption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 15px 0px 15px;
+			width: 100%;
+			opacity: 0;
+			color: lightgoldenrodyellow;
+			background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+			transition: 0.3s;
+		}
+ 
+
+
+
+	</style>
+	<script src="https://kit.fontawesome.com/9494322ed3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="/__/firebase/8.4.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+
+	<!-- Initialize Firebase -->
+	<script src="/__/firebase/init.js"></script>
+	<div id=presentation_wrapper>	
+		<br>
+	</div>
+	<div id="presentation_flex">
+		<div class="menu">
+			<ul>
+			  <li><a href="./Index_video.html"> <i class="fas fa-home"></i></a></li>
+			  <li><a href="./Blog.html">Blog</a></li>
+			  <li><a href="./Memories.html">Memories</a></li>
+			  <li><a href="./Information.html">Information</a></li>
+			</ul>
+		</div>
+		<div class="gallery">
+			<div class="gallery__column">
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Snowy.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Snowboarding</figcaption>
+					</figure>
+				</a>
+
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Amics.jpg" alt="Rob_Clar_Sar" class="gallery__image">
+						<figcaption class="gallery__caption">Fontpedrouse with Robert, Clara and Sara</figcaption>
+					</figure>
+				</a>
+		
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Arani_bike.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">My sister's bike</figcaption>
+					</figure>
+				</a>
+		
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Art_nouveau.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Art Nouveau visit</figcaption>
+					</figure>
+				</a>
+
+
+			</div>
+
+			<div class="gallery__column">
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Arxux.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">My sister with her tortoise</figcaption>
+					</figure>
+				</a>
+
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Talking_Max.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Night mood with Max and friends</figcaption>
+					</figure>
+				</a>
+				
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Borin.jpg" alt="Myself" class="gallery__image">
+						<figcaption class="gallery__caption">Myself</figcaption>
+					</figure>
+				</a>
+		
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/CostaBrava.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Posing in costa Brava</figcaption>
+					</figure>
+				</a>
+			</div>
+				
+			<div class="gallery__column">
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/El_chalten.JPG" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Argentina's glacier</figcaption>
+					</figure>
+				</a>
+				
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Flyin_Web.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Happy flying :)</figcaption>
+					</figure>
+				</a>
+		
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/gemes.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Best friends! aka Animalitos</figcaption>
+					</figure>
+				</a>
+			</div>
+				
+			<div class="gallery__column">
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Morning_terrace.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Morning in my terrace</figcaption>
+					</figure>
+				</a>
+		
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Parc_citoyens.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Park where I go chill</figcaption>
+					</figure>
+				</a>
+				
+				<a href="#" target="_blank" class="gallery__link">
+					<figure class="gallery__thumb">
+						<img src="./media/Memories/Playa_guguy.JPG" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Remote beach in Gran Canaria</figcaption>
+					</figure>
+				</a>
+			</div>
+
+
+		</div>
+	</div>
+	</body>
+</html>
