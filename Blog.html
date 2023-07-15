@@ -24,24 +24,37 @@
 			margin-left:0px;
 			margin-right:0px;
 			margin-bottom:0px;
-			background:#fac57a;
+			background:#2a2013;
 			font-family: 'Roboto Mono', sans-serif;
 			font-size:12px;
-			color:#ba500e;
+			color:#f4a250;
 			/*linear-gradient(90deg, #333333,#3f4e59);*/
 		}
 
 		h1{
 			font-size: 4vmin;
+			align-self: flex-start;
+			flex-grow: 1;
+			margin-left: 10vw;
+		}
+
+		h2{
+			font-size:2.3vmin;
+			color: #e6743b;
+			top:5px;
+			bottom:5px;
 		}
 
 		p1{
+			display:block;
 			font-size:2.7vmin;
+			align-self: self-end;
+			flex-grow: 2;
+			margin-left: 30vw;
+			margin-right: 10vw;
+			margin-top: 5vw;
 		}
 
-		#quote{
-			font-size:2.4vmin;
-		}
 
 		#presentation_flex {
 			display: flex;
@@ -64,6 +77,7 @@
 			color: #fff;
 			padding: 10px;
 			border-radius: 10px;
+			z-index: 2;
 		}
 
 		/* Style for the menu items */
@@ -95,6 +109,126 @@
 			border-radius: 10px;
 		}
 
+		.timeline {
+			margin: 20px auto;
+			padding: 20px;
+		}
+
+		.card {
+			position: relative;
+			max-width: 60vw;
+			min-width: 50vw;
+			/*max-width: 400px;*/
+		}
+
+		/* setting padding based on even or odd */
+		.card:nth-child(odd) {
+			padding: 30px 0 30px 30px;
+		}
+		.card:nth-child(even) {
+			padding: 30px 30px 30px 0;
+		}
+		/* Global ::before */
+		.card::before {
+			content: "";
+			position: absolute;
+			width: 50%;
+			border: solid #f4a250;
+		}
+
+		/* Setting the border of top, bottom, left */
+		.card:nth-child(odd)::before {
+			left: 0px;
+			top: -5px;
+			bottom: -5px;
+			border-width: 5px 0 5px 5px;
+			border-radius: 50px 0 0 50px;
+		}
+
+
+		/* Setting the border of top, bottom, right */
+		.card:nth-child(even)::before {
+			right: 0;
+			top: 0;
+			bottom: 0;
+			border-width: 5px 5px 5px 0;
+			border-radius: 0 50px 50px 0;
+		}
+
+		/* Removing the border if it is the first card */
+		.card:first-child::before {
+			border-top: 0;
+			border-top-left-radius: 0;
+		}
+
+		/* Removing the border if it is the last card  and it's odd */
+		.card:last-child:nth-child(odd)::before {
+			border-bottom: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		/* Removing the border if it is the last card  and it's even */
+		.card:last-child:nth-child(even)::before {
+			border-bottom: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		/* Information about the timeline */
+		.info {
+			display: flex;
+			flex-direction: column;
+			/*background: #333;*/
+			color: rgb(172, 153, 140);
+			border-radius: 10px;
+			padding: 10px;
+		}
+
+		/* Title of the card */
+		.title {
+			color: #f55708;
+			font-size: 3.2vmin;
+			position: relative;
+			margin-top:5px;
+			margin-bottom: 5px;
+		}
+
+		/* Timeline dot  */
+		.title::before {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background: white;
+			border-radius: 999px;
+			border: 3px solid #f4a250;
+		}
+
+		/* text right if the card is even  */
+		.card:nth-child(even) > .info > .title {
+			text-align: right;
+		}
+
+		/* text right if the card is even  */
+		.card:nth-child(even) > .info > h2 {
+			text-align: right;
+		}
+
+		.card:nth-child(even) > .info > p {
+			text-align: right;
+		}
+
+		/* setting dot to the left if the card is odd */
+		.card:nth-child(odd) > .info > .title::before {
+			left: -45px;
+		}
+
+		/* setting dot to the right if the card is odd */
+		.card:nth-child(even) > .info > .title::before {
+			right: -45px;
+		}
+
+
+
 
 	</style>
 	<script src="https://kit.fontawesome.com/9494322ed3.js" crossorigin="anonymous"></script>
@@ -117,21 +251,55 @@
 			<ul>
 			  <li><a href="./Index_video.html"> <i class="fas fa-home"></i></a></li>
 			  <li><a href="./Blog.html">Blog</a></li>
-			  <li><a href="./Media.html">Media</a></li>
+			  <li><a href="./Memories.html">Memories</a></li>
 			  <li><a href="./Information.html">Information</a></li>
 			</ul>
 		</div>
 		<div id="Blog_presentation">
 			<h1>About me</h1>
-				<p1>
-					My name is <b>Borin Kaduk Aguilar</b>, born (05/12/98) in <a href="https://goo.gl/maps/aLiW2mANdJXf8bpZ9" target='blank'>Perpignan</a> &#127467;&#127479;, raised in <a href="https://goo.gl/maps/p6nMj7xt6BV2FWz46" target='blank'>Sant Hilari</a> &#127466;&#127480; and currently living in <a href="https://goo.gl/maps/EqemXTPPTCEcBPFJA" target='blank'>Brussels</a>   &#127463;&#127466;. <br> <br> 
-					If you are curious to know a bit more about my personality, my Myers-Briggs indicator is <a href=https://www.16personalities.com/enfj-personality target="blank">ENFJ-A</a> type.
+				<p1>My name is <b>Borin Kaduk Aguilar</b>, born (05/12/98) in <a href="https://goo.gl/maps/aLiW2mANdJXf8bpZ9" target='blank'>Perpignan</a> &#127467;&#127479;, raised in <a href="https://goo.gl/maps/p6nMj7xt6BV2FWz46" target='blank'>Sant Hilari</a> &#127466;&#127480; and currently living in <a href="https://goo.gl/maps/EqemXTPPTCEcBPFJA" target='blank'>Brussels</a>   &#127463;&#127466;. <br> <br> 
+					My Myers-Briggs indicator is <a href=https://www.16personalities.com/enfj-personality target="blank">ENFJ-A</a> type.
 				</p1>
 		</div>
-		<div id="calendar-flex">Input Calendar and then start the blog with click to the reference page.
-			https://www.educative.io/answers/how-to-create-a-timeline-in-html
-			or
-			https://freefrontend.com/css-timelines/
+		<div class="timeline">
+			<div class="outer">
+				<div class="card">
+				  <div class="info">
+					<h3 class="title">2023</h3>
+					<h2>May</h2>
+					<p> I passed again FEAST II in Maastricht to work as ATC at Eurocontrol. <br><br>
+					This time, they rejected me at the last interview. It was a nice experience, the world of operations seems fascinating. In the long run, I would like to work for NMOC. </p>
+					<h2>January</h2>
+					<p> They offered me a contract as Air Traffic Controller at Skeyes, the Belgian Air Navigation Service Provider. <br><br>
+					I rejected it, although conditions were nice, I do not want to live all my life in Charleroi. However, I would like to try to become an ATC at Eurocontrol.</p>
+				  </div>
+				</div>
+				<div class="card">
+				  <div class="info">
+					<h3 class="title">2022</h3>
+					<h2>September</h2>
+					<p>
+						I decided to start a master in management at <a href="https://www.vub.be/en" target="blank">VUB</a>. <br><br>
+						The decision was taken to mix my knowledge in engineering with social sciences.
+						Society encourages people having masters, and every time more and more a master is easier to get. It's my turn now to get it, let's see what do I learn from it. 
+					</p>
+					<h2>March</h2>
+					<p>I just joined a flying club in Saint Ghislain to learn how to fly an airplane. Prices are democratic and my instructor, Damien Mousset, holds 7.000 flight hours. He said I learn quickly and maybe it is because he is spotting my mistakes even quicker, he has a good eye.</p>
+				  </div>
+				</div>
+				<div class="card">
+				  <div class="info">
+					<h3 class="title">2021</h3>
+					<h2>May</h2>
+					<p>
+					Right before my traineeship ends at Eurocontrol, I got offered a nice position as an ATSEP at the Irish Aviation Authority at the same time they offered me to continue working as a contractor at Eurocontrol. <br><br>
+					The main reason to stay at Eurocontrol because with my age I do not want to focus already in a single field on the vast world of aviation. If they want me as an ATSEP now, they will also want me in the future.
+					</p>
+					<h2>February</h2>
+					<p>I created this webpage to learn a bit about web developing and web hosting. It is quite simple and it will serve as a small auto-biography, where I briefly dump my thoughts and life-experiences in here.</p>
+				  </div>
+				</div>
+			  </div>
 		</div>
 	</div>
 	</body>
