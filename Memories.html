@@ -81,12 +81,12 @@
 			border-radius: 10px;
 		}
 
-		.gallery {
+		.ggallery {
 			display: flex;
 			padding: 2px;
 			transition: 0.3s;
 		}
-		.gallery:hover .gallery__image {
+		.ggallery:hover .gallery__image {
 			filter: grayscale(1);
 		}
 		.gallery__column {
@@ -95,8 +95,7 @@
 			width: 25%;
 		}
 		.gallery__link {
-			margin: 2px;
-			overflow: hidden;
+			margin: 5px;
 		}
 		.gallery__link:hover .gallery__image {
 			filter: grayscale(0);
@@ -113,7 +112,9 @@
 			transition: 0.3s;
 		}
 		.gallery__image:hover {
-			transform: scale(1.1);
+			transform: scale(1.05);
+			position:relative;
+			z-index:3;
 		}
 		.gallery__caption {
 			position: absolute;
@@ -125,147 +126,202 @@
 			color: lightgoldenrodyellow;
 			background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
 			transition: 0.3s;
+			z-index:4;
 		}
- 
+
+		
+		.gallery__link:active img, .gallery__link:focus img
+		{
+			height: 16rem;
+		}
 
 
 
 	</style>
+	<link	rel="stylesheet"	href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+	/>
 	<script src="https://kit.fontawesome.com/9494322ed3.js" crossorigin="anonymous"></script>
   </head>
   <body>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="/__/firebase/8.4.2/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+	<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 	<script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
 
 	<!-- Initialize Firebase -->
 	<script src="/__/firebase/init.js"></script>
+
+
+
 	<div id=presentation_wrapper>	
 		<br>
 	</div>
 	<div id="presentation_flex">
 		<div class="menu">
 			<ul>
-			  <li><a href="./Index_video.html"> <i class="fas fa-home"></i></a></li>
+			  <li><a href="./Index.html"> <i class="fas fa-home"></i></a></li>
 			  <li><a href="./Blog.html">Blog</a></li>
 			  <li><a href="./Memories.html">Memories</a></li>
 			  <li><a href="./Information.html">Information</a></li>
 			</ul>
 		</div>
-		<div class="gallery">
+		<div class="ggallery">
 			<div class="gallery__column">
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/Talking_Max.jpg" data-fancybox="gallery" data-caption="Late night talk with Max and company" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/Talking_Max.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Late night talk with Max and company</figcaption>
+					</div>
+				</a>
+
+				<a href="./media/Memories/Snowy.jpg" data-fancybox="gallery" data-caption="Snowboarding" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/Snowy.jpg" alt="" class="gallery__image">
 						<figcaption class="gallery__caption">Snowboarding</figcaption>
-					</figure>
+					</div>
 				</a>
 
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
-						<img src="./media/Memories/Amics.jpg" alt="Rob_Clar_Sar" class="gallery__image">
-						<figcaption class="gallery__caption">Fontpedrouse with Robert, Clara and Sara</figcaption>
-					</figure>
-				</a>
+				
 		
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/Arani_bike.jpg" data-fancybox="gallery" data-caption="My sister's bike" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/Arani_bike.jpg" alt="" class="gallery__image">
 						<figcaption class="gallery__caption">My sister's bike</figcaption>
-					</figure>
+					</div>
 				</a>
 		
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/Art_nouveau.jpg" data-fancybox="gallery" data-caption="Art Nouveau's theatre" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/Art_nouveau.jpg" alt="" class="gallery__image">
-						<figcaption class="gallery__caption">Art Nouveau visit</figcaption>
-					</figure>
+						<figcaption class="gallery__caption">Art Nouveau's theatre</figcaption>
+					</div>
 				</a>
 
 
 			</div>
 
 			<div class="gallery__column">
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/Presentation_image.jpg" data-fancybox="gallery" data-caption="Inviting you to the beach" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/Presentation_image.JPG" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Inviting you to the beach</figcaption>
+					</div>
+				</a>
+
+				<a href="./media/Memories/Arxux.jpg" data-fancybox="gallery" data-caption="My sister with her tortoise" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/Arxux.jpg" alt="" class="gallery__image">
 						<figcaption class="gallery__caption">My sister with her tortoise</figcaption>
-					</figure>
+					</div>
+				</a>
+				
+				<a href="./media/Memories/Borin.jpg" data-fancybox="gallery" data-caption="Myself posing" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/Borin.jpg" alt="Myself" class="gallery__image">
+						<figcaption class="gallery__caption">Myself posing</figcaption>
+					</div>
 				</a>
 
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
-						<img src="./media/Memories/Talking_Max.jpg" alt="" class="gallery__image">
-						<figcaption class="gallery__caption">Night mood with Max and friends</figcaption>
-					</figure>
-				</a>
-				
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
-						<img src="./media/Memories/Borin.jpg" alt="Myself" class="gallery__image">
-						<figcaption class="gallery__caption">Myself</figcaption>
-					</figure>
+				<a href="./media/Memories/House.jpg" data-fancybox="gallery" data-caption="Art in my apartment, made by Loar" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/House.jpg" alt="Myself" class="gallery__image">
+						<figcaption class="gallery__caption">Art in my apartment</figcaption>
+					</div>
 				</a>
 		
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/CostaBrava.jpg" data-fancybox="gallery" data-caption="Hanging at the cliffs of L'escala" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/CostaBrava.jpg" alt="" class="gallery__image">
 						<figcaption class="gallery__caption">Posing in costa Brava</figcaption>
-					</figure>
+					</div>
 				</a>
 			</div>
 				
 			<div class="gallery__column">
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/El_chalten.jpg" data-fancybox="gallery" data-caption="Argentina's glacier" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/El_chalten.JPG" alt="" class="gallery__image">
 						<figcaption class="gallery__caption">Argentina's glacier</figcaption>
-					</figure>
+					</div>
 				</a>
 				
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/Flyin_Web.jpg" data-fancybox="gallery" data-caption="Over Mons, flying solo" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/Flyin_Web.jpg" alt="" class="gallery__image">
 						<figcaption class="gallery__caption">Happy flying :)</figcaption>
-					</figure>
+					</div>
+				</a>
+
+				<a href="./media/Memories/Iguazu.jpg" data-fancybox="gallery" data-caption="Iguazu falls" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/Iguazu.jpg" alt="Rob_Clar_Sar" class="gallery__image">
+						<figcaption class="gallery__caption">Iguazu</figcaption>
+					</div>
+				</a>
+				
+				<a href="./media/Memories/Amics.jpg" data-fancybox="gallery" data-caption="Fontpedrouse with Robert, Clara and Sara" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/Amics.jpg" alt="Rob_Clar_Sar" class="gallery__image">
+						<figcaption class="gallery__caption">Fontpedrouse with Robert, Clara and Sara</figcaption>
+					</div>
 				</a>
 		
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/gemes.jpg" data-fancybox="gallery" data-caption="With Isma and David in the forest" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/gemes.jpg" alt="" class="gallery__image">
-						<figcaption class="gallery__caption">Best friends! aka Animalitos</figcaption>
-					</figure>
+						<figcaption class="gallery__caption">With Isma and David in the forest</figcaption>
+					</div>
 				</a>
 			</div>
 				
 			<div class="gallery__column">
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/SaoTome1.jpg" data-fancybox="gallery" data-caption="From the trip to Sao Tome" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/SaoTome1.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Sao Tome trip</figcaption>
+					</div>
+				</a>
+
+				<a href="./media/Memories/Robert_clara.jpg" data-fancybox="gallery" data-caption="Pair of good friends" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/Robert_clara.jpg" alt="" class="gallery__image">
+						<figcaption class="gallery__caption">Robert and Clara</figcaption>
+					</div>
+				</a>
+
+				<a href="./media/Memories/Morning_terrace.jpg" data-fancybox="gallery" data-caption="Morning view" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/Morning_terrace.jpg" alt="" class="gallery__image">
 						<figcaption class="gallery__caption">Morning in my terrace</figcaption>
-					</figure>
+					</div>
 				</a>
 		
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/Parc_citoyens.jpg" data-fancybox="gallery" data-caption="Park where I go chill" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/Parc_citoyens.jpg" alt="" class="gallery__image">
 						<figcaption class="gallery__caption">Park where I go chill</figcaption>
-					</figure>
+					</div>
 				</a>
 				
-				<a href="#" target="_blank" class="gallery__link">
-					<figure class="gallery__thumb">
+				<a href="./media/Memories/Playa_guguy.jpg" data-fancybox="gallery" data-caption="Remote beach in Gran Canaria" class="gallery__link">
+					<div class="gallery__thumb">
 						<img src="./media/Memories/Playa_guguy.JPG" alt="" class="gallery__image">
 						<figcaption class="gallery__caption">Remote beach in Gran Canaria</figcaption>
-					</figure>
+					</div>
 				</a>
 			</div>
 
 
 		</div>
 	</div>
+	<!--CDNJS For clicking and expanding images-->
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<script>
+		Fancybox.bind('[data-fancybox="gallery"]', {
+        //
+      });
+	</script>
 	</body>
 </html>
