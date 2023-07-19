@@ -84,11 +84,12 @@
 
 		.menu li a {
 			display: block;
+			object-fit: contain;
 			color: #63331d;
 			text-align: center;
 			text-decoration: none;
 			font-size: 2.8vmin;
-			padding: 5px 7vmin;
+			padding: 5px 15px;
 		}
 
 		.menu li a:hover {
@@ -96,15 +97,68 @@
 			border-radius: 10px;
 		}
 
-		#myVideo {
-			position: fixed;
-			right: 0;
-			bottom: 0;
-
-			min-width: 50%;
-			min-height: 50%;
-			transform: translateX(calc((100% - 100vw) / 2));
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Lato, sans-serif;
 		}
+
+		body {
+			background-color: #181818;
+			color: #d8d8d8;
+		}
+
+		.container {
+			padding: 5vw;
+		}
+
+		.boxes {
+			margin-top: 50px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+
+
+		.box {
+			width: 30vw;
+			min-width: 250px;
+			font-size: 1em;
+			line-height: 1.5em;
+			font-weight: 200;
+			padding: 0 4vw 4vw;
+			border-right: 2px;
+			border-left: 0;
+			border-style: solid;
+		/* 	border-image: linear-gradient(to bottom, #ccc, #555 66%, #181818) 1 100%; */
+			border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
+		}
+
+		.box:last-child {
+			border-right: 0;
+		}
+
+		.box .icon {
+			font-size: 4em;
+			color: #555;
+			margin-bottom: 0.6em;
+		}
+
+		.box .icon:hover {
+			color: #d8d8d8;
+		}
+
+		.box h2 {
+			font-size: 1.3em;
+			margin-bottom: 1em;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			font-weight: 200;
+			line-height: 1em;
+			color: #f2f2f2;
+		}
+		
 
 	</style>
 	<script src="https://kit.fontawesome.com/9494322ed3.js" crossorigin="anonymous"></script>
@@ -123,9 +177,6 @@
 		<br>
 	</div>
 	<div id="presentation_flex">
-		<video autoplay muted loop id="myVideo">
-			<source src="./media/webapp_video.mp4" type="video/mp4">
-		</video>
 		<div class="menu">
 			<ul>
 			  <li><a href="./Index.html"> <i class="fas fa-home"></i></a></li>
@@ -134,14 +185,39 @@
 			  <li><a href="./Information.html">Information</a></li>
 			</ul>
 		</div>
-		<div id="introduction_quote">
-			<h1 id="Welcome_message">Welcome bystander,</h1>
-			<p1>Hope you enjoy my website </p1>
-			<br>
-			<br>
-			<br>
-			<p1 id="quote"><i>I would rather be ashes than dust,<br> I would rather be a meteor than a sleepy and permanent planet.<br>
-				The function of man is to live, not to exist.<br>-Jack London</i></p1>
+		<div class="container">
+			<div class="boxes">
+				<div class="box">
+					<p class="icon">&#x265A</p>
+					<h2>Now reading</h2>
+					Thinking in Systems, Donella H. Meadows.
+				</div>
+				<div class="box">
+					<p class="icon">&#x265B</p>
+					<h2>Hobbies</h2>
+					Yoga, Chess, Flying, Scuba Diving, Meditation and Climbing. 
+				</div>
+				<div class="box">
+					<p class="icon">&#x265C</p>
+					<h2>Last songs</h2>
+					<a href="https://www.youtube.com/watch?v=Z_lgOwrtl2M" target="blank">MADLY - The Blaze</a>
+				</div>
+				<div class="box">
+					<p class="icon">&#x265D</p>
+					<h2>Last movies</h2>
+					
+				</div>
+				<div class="box">
+					<p class="icon">&#x265E</p>
+					<h2>Last meal</h2>
+					
+				</div>
+				<div class="box">
+					<p class="icon">&#x265F</p>
+					<h2>Thoughts</h2>
+					
+				</div>
+			</div>
 		</div>
 	</div>
 	</body>
