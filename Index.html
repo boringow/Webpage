@@ -61,7 +61,6 @@
 			position: sticky;
 			width: 80%;
 			top: 0;
-			background-color: #f4a250;
 			color: #fff;
 			padding: 10px;
 			border-radius: 10px;
@@ -71,21 +70,24 @@
 		.menu ul {
 			display:flex;
 			flex-direction: row;
-			justify-content: space-around;
+			justify-content: center;
 			align-content: stretch;
 			list-style-type: none;
-			margin: 0;
-			padding: 0;
+			margin: 0px;
+			padding: 0px;
 		}
 
 		.menu li {
 			display: inline-block;
+			border-radius: 20px;
+			background-color: #f4a250bc;
+			margin: 10px;
 		}
 
 		.menu li a {
 			display: block;
 			object-fit: contain;
-			color: #63331d;
+			color: #63331dbc;
 			text-align: center;
 			text-decoration: none;
 			font-size: 2.8vmin;
@@ -94,7 +96,13 @@
 
 		.menu li a:hover {
 			background-color: #8a3232b2;
-			border-radius: 10px;
+			border-radius: 20px;
+		}
+
+		#current{
+			color: #63331d;
+			background-color: #f4a250;
+			border-radius: 20px;
 		}
 
 		#myVideo {
@@ -129,7 +137,7 @@
 		</video>
 		<div class="menu">
 			<ul>
-			  <li><a href="./Index.html"> <i class="fas fa-home"></i></a></li>
+			  <li><a href="./Index.html" id="current"> <i class="fas fa-home"></i></a></li>
 			  <li><a href="./Blog.html">Blog</a></li>
 			  <li><a href="./Memories.html">Memories</a></li>
 			  <li><a href="./Information.html">Information</a></li>

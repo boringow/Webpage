@@ -46,7 +46,6 @@
 			margin: auto;
 			width: 80%;
 			top: 0;
-			background-color: #f4a250;
 			color: #fff;
 			padding: 10px;
 			border-radius: 10px;
@@ -56,7 +55,7 @@
 		.menu ul {
 			display:flex;
 			flex-direction: row;
-			justify-content: space-around;
+			justify-content: center;
 			align-content: stretch;
 			list-style-type: none;
 			margin: 0;
@@ -65,12 +64,15 @@
 
 		.menu li {
 			display: inline-block;
+			border-radius: 20px;
+			margin: 10px;
+			background-color: #f4a250bc;
 		}
 
 		.menu li a {
 			display: block;
 			object-fit: contain;
-			color: #63331d;
+			color: #63331dbc;
 			text-align: center;
 			text-decoration: none;
 			font-size: 2.8vmin;
@@ -79,7 +81,13 @@
 
 		.menu li a:hover {
 			background-color: #8a3232b2;
-			border-radius: 10px;
+			border-radius: 20px;
+		}
+
+		#current{
+			color: #63331d;
+			background-color: #f4a250;
+			border-radius: 20px;
 		}
 
 		.ggallery {
@@ -160,7 +168,7 @@
 			<ul>
 			  <li><a href="./Index.html"> <i class="fas fa-home"></i></a></li>
 			  <li><a href="./Blog.html">Blog</a></li>
-			  <li><a href="./Memories.html">Memories</a></li>
+			  <li><a href="./Memories.html" id="current">Memories</a></li>
 			  <li><a href="./Information.html">Information</a></li>
 			</ul>
 		</div>
@@ -193,7 +201,21 @@
 						<div class="gallery__caption">My sister's bike</div>
 					</div>
 				</a>
-		
+
+				<a href="./media/Memories/wildFlowersMasmechelen.jpg" data-fancybox="gallery" data-caption="Wild flowers in Maasmechelen, Belgium" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/wildFlowersMasmechelen.jpg" alt="" class="gallery__image">
+						<div class="gallery__caption">Wild flowers in Maasmechelen, Belgium</div>
+					</div>
+				</a>
+				
+				<a href="./media/Memories/lostetes.jpg" data-fancybox="gallery" data-caption="The brothers in Berlin!" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/lostetes.jpg" alt="" class="gallery__image">
+						<div class="gallery__caption">Riding e-scooters in Tempelhof airport, Berlin</div>
+					</div>
+				</a>
+
 				<a href="./media/Memories/Art_nouveau.jpg" data-fancybox="gallery" data-caption="Art Nouveau's theatre" class="gallery__link">
 					<div class="gallery__thumb">
 						<img src="./media/Memories/Art_nouveau.jpg" alt="" class="gallery__image">
@@ -204,7 +226,7 @@
 
 			</div>
 
-			<div class="gallery__column">
+			<div class="gallery__column">				
 				<a href="./media/Memories/Presentation_image.jpg" data-fancybox="gallery" data-caption="Inviting you to the beach" class="gallery__link">
 					<div class="gallery__thumb">
 						<img src="./media/Memories/Presentation_image.JPG" alt="" class="gallery__image">
@@ -216,6 +238,13 @@
 					<div class="gallery__thumb">
 						<img src="./media/Memories/Arxux.jpg" alt="" class="gallery__image">
 						<div class="gallery__caption">My sister with her tortoise</div>
+					</div>
+				</a>
+
+				<a href="./media/Memories/FlyingPOV.jpg" data-fancybox="gallery" data-caption="POV inside the cabin" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/FlyingPOV.jpg" alt="" class="gallery__image">
+						<div class="gallery__caption">POV inside the cabin</div>
 					</div>
 				</a>
 				
@@ -239,6 +268,13 @@
 						<div class="gallery__caption">Posing in costa Brava</div>
 					</div>
 				</a>
+
+				<a href="./media/Memories/diving_Nahia.jpg" data-fancybox="gallery" data-caption="First open water inmersion with Nahia" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/diving_Nahia.jpg" alt="" class="gallery__image">
+						<div class="gallery__caption">First open water inmersion with Nahia</div>
+					</div>
+				</a>
 			</div>
 				
 			<div class="gallery__column">
@@ -249,6 +285,13 @@
 					</div>
 				</a>
 				
+				<a href="./media/Memories/more_art.jpg" data-fancybox="gallery" data-caption="The last moments of a candle in a bottle of wine" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/more_art.jpg" alt="" class="gallery__image">
+						<div class="gallery__caption">The last moments of a candle in a bottle of wine</div>
+					</div>
+				</a>
+
 				<a href="./media/Memories/Flyin_Web.jpg" data-fancybox="gallery" data-caption="Over Mons, flying solo" class="gallery__link">
 					<div class="gallery__thumb">
 						<img src="./media/Memories/Flyin_Web.jpg" alt="" class="gallery__image">
@@ -286,6 +329,13 @@
 			</div>
 				
 			<div class="gallery__column">
+				<a href="./media/Memories/SerbianTrip.jpg" data-fancybox="gallery" data-caption="Yugo car and funeral notes in Valjebo, Serbia" class="gallery__link">
+					<div class="gallery__thumb">
+						<img src="./media/Memories/SerbianTrip.jpg" alt="" class="gallery__image">
+						<div class="gallery__caption">Yugo car and funeral notes in Valjebo, Serbia</div>
+					</div>
+				</a>
+
 				<a href="./media/Memories/SaoTome1.jpg" data-fancybox="gallery" data-caption="From the trip to Sao Tome" class="gallery__link">
 					<div class="gallery__thumb">
 						<img src="./media/Memories/SaoTome1.jpg" alt="" class="gallery__image">
@@ -293,7 +343,7 @@
 					</div>
 				</a>
 
-				<a href="./media/Memories/Cuba1.jpg" data-fancybox="gallery" data-caption="Memory from Cuba" class="gallery__link">
+				<a href="./media/Memories/Cuba1.jpg" data-fancybox="gallery" data-caption="Los acuaticos, Viñales, Cuba" class="gallery__link">
 					<div class="gallery__thumb">
 						<img src="./media/Memories/Cuba1.jpg" alt="" class="gallery__image">
 						<div class="gallery__caption">From Cuba</div>

@@ -26,7 +26,7 @@
 			margin-bottom:0px;
 			background:#2a2013;
 			font-family: 'Roboto Mono', sans-serif;
-			font-size:12px;
+			font-size:2.5vmin;
 			color:#f4a250;
 			/*linear-gradient(90deg, #333333,#3f4e59);*/
 		}
@@ -39,7 +39,7 @@
 		}
 
 		h2{
-			font-size:2.3vmin;
+			font-size:2.7vmin;
 			color: #e6743b;
 			top:5px;
 			bottom:5px;
@@ -47,7 +47,7 @@
 
 		p1{
 			display:block;
-			font-size:2.7vmin;
+			font-size:2.5vmin;
 			align-self: self-end;
 			flex-grow: 2;
 			margin-left: 30vw;
@@ -70,10 +70,8 @@
 
 		.menu {
 			margin: auto;
-			position: sticky;
 			width: 80%;
 			top: 0;
-			background-color: #f4a250;
 			color: #fff;
 			padding: 10px;
 			border-radius: 10px;
@@ -84,7 +82,7 @@
 		.menu ul {
 			display:flex;
 			flex-direction: row;
-			justify-content: space-around;
+			justify-content: center;
 			align-content: stretch;
 			list-style-type: none;
 			margin: 0;
@@ -93,12 +91,15 @@
 
 		.menu li {
 			display: inline-block;
+			border-radius: 20px;
+			background-color: #f4a250bc;
+			margin: 10px;
 		}
 
 		.menu li a {
 			display: block;
 			object-fit: contain;
-			color: #63331d;
+			color: #63331dbc;
 			text-align: center;
 			text-decoration: none;
 			font-size: 2.8vmin;
@@ -107,7 +108,13 @@
 
 		.menu li a:hover {
 			background-color: #8a3232b2;
-			border-radius: 10px;
+			border-radius: 20px;
+		}
+
+		#current{
+			color: #63331d;
+			background-color: #f4a250;
+			border-radius: 20px;
 		}
 
 		.timeline {
@@ -251,7 +258,7 @@
 		<div class="menu">
 			<ul>
 			  <li><a href="./Index.html"> <i class="fas fa-home"></i></a></li>
-			  <li><a href="./Blog.html">Blog</a></li>
+			  <li><a href="./Blog.html" id="current">Blog</a></li>
 			  <li><a href="./Memories.html">Memories</a></li>
 			  <li><a href="./Information.html">Information</a></li>
 			</ul>

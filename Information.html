@@ -4,7 +4,8 @@
   <head>
 	<title>Borin's website</title>
 	<link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./media/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./media/favicon-16x16.png">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<link rel="manifest" href="./media/site.webmanifest">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +13,6 @@
 	<!-- Font types -->
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital@1&family=Roboto+Mono&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-	<link rel='stylesheet' href='./css/style.css'>
 	<style>
 		html {
 			scroll-behavior: smooth;
@@ -24,7 +24,7 @@
 			margin-left:0px;
 			margin-right:0px;
 			margin-bottom:0px;
-			background:#fac57a;
+			background:#281801;
 			font-family: 'Roboto Mono', sans-serif;
 			font-size:12px;
 			color:#e08a34;
@@ -58,10 +58,8 @@
 
 		.menu {
 			margin: auto;
-			position: sticky;
 			width: 80%;
 			top: 0;
-			background-color: #f4a250;
 			color: #fff;
 			padding: 10px;
 			border-radius: 10px;
@@ -71,7 +69,7 @@
 		.menu ul {
 			display:flex;
 			flex-direction: row;
-			justify-content: space-around;
+			justify-content: center;
 			align-content: stretch;
 			list-style-type: none;
 			margin: 0;
@@ -80,12 +78,15 @@
 
 		.menu li {
 			display: inline-block;
+			border-radius: 20px;
+			background-color: #f4a250bc;
+			margin: 10px;
 		}
 
 		.menu li a {
 			display: block;
 			object-fit: contain;
-			color: #63331d;
+			color: #63331dbc;
 			text-align: center;
 			text-decoration: none;
 			font-size: 2.8vmin;
@@ -94,71 +95,27 @@
 
 		.menu li a:hover {
 			background-color: #8a3232b2;
-			border-radius: 10px;
+			border-radius: 20px;
 		}
 
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: Lato, sans-serif;
+		#current{
+			color: #63331d;
+			background-color: #f4a250;
+			border-radius: 20px;
 		}
 
-		body {
-			background-color: #181818;
-			color: #d8d8d8;
-		}
-
-		.container {
-			padding: 5vw;
-		}
-
-		.boxes {
-			margin-top: 50px;
-			display: flex;
+		.boxes{
+			display:flex;
 			flex-wrap: wrap;
-			justify-content: space-evenly;
+			margin:10px 10vw 10px 10vw;
 		}
 
-
-		.box {
-			width: 30vw;
-			min-width: 250px;
-			font-size: 1em;
-			line-height: 1.5em;
-			font-weight: 200;
-			padding: 0 4vw 4vw;
-			border-right: 2px;
-			border-left: 0;
-			border-style: solid;
-		/* 	border-image: linear-gradient(to bottom, #ccc, #555 66%, #181818) 1 100%; */
-			border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
+		.box{
+			min-width:25vw;
+			margin-left:15px;
+			margin-right:10px;
 		}
 
-		.box:last-child {
-			border-right: 0;
-		}
-
-		.box .icon {
-			font-size: 4em;
-			color: #555;
-			margin-bottom: 0.6em;
-		}
-
-		.box .icon:hover {
-			color: #d8d8d8;
-		}
-
-		.box h2 {
-			font-size: 1.3em;
-			margin-bottom: 1em;
-			text-transform: uppercase;
-			letter-spacing: 4px;
-			font-weight: 200;
-			line-height: 1em;
-			color: #f2f2f2;
-		}
-		
 
 	</style>
 	<script src="https://kit.fontawesome.com/9494322ed3.js" crossorigin="anonymous"></script>
@@ -182,39 +139,34 @@
 			  <li><a href="./Index.html"> <i class="fas fa-home"></i></a></li>
 			  <li><a href="./Blog.html">Blog</a></li>
 			  <li><a href="./Memories.html">Memories</a></li>
-			  <li><a href="./Information.html">Information</a></li>
+			  <li><a href="./Information.html" id="current">Information</a></li>
 			</ul>
 		</div>
 		<div class="container">
 			<div class="boxes">
 				<div class="box">
-					<p class="icon">&#x265A</p>
-					<h2>Now reading</h2>
+					<p class="icon"><i class="fa-solid fa-people-roof"></i></p>
+					<h2>Family</h2>
 					Thinking in Systems, Donella H. Meadows.
 				</div>
 				<div class="box">
-					<p class="icon">&#x265B</p>
-					<h2>Hobbies</h2>
-					Yoga, Chess, Flying, Scuba Diving, Meditation and Climbing. 
+					<p class="icon"><i class="fa-regular fa-thumbs-up"></i></p>
+					<h2>Interests</h2>
+					Aviation, Yoga, Chess, Flying, Artistic Gymnastics, Meditation and gardening.
 				</div>
 				<div class="box">
-					<p class="icon">&#x265C</p>
-					<h2>Last songs</h2>
+					<p class="icon"><i class="fa-solid fa-heart"></i></p>
+					<h2>Faviourites</h2>
 					<a href="https://www.youtube.com/watch?v=Z_lgOwrtl2M" target="blank">MADLY - The Blaze</a>
 				</div>
 				<div class="box">
-					<p class="icon">&#x265D</p>
-					<h2>Last movies</h2>
+					<p class="icon"><i class="fa-solid fa-bullseye"></i></p>
+					<h2>Goals and aspirations</h2>
 					
 				</div>
 				<div class="box">
-					<p class="icon">&#x265E</p>
-					<h2>Last meal</h2>
-					
-				</div>
-				<div class="box">
-					<p class="icon">&#x265F</p>
-					<h2>Thoughts</h2>
+					<p class="icon"><i class="fa-solid fa-bucket"></i></p>
+					<h2>Bucket List</h2>
 					
 				</div>
 			</div>
