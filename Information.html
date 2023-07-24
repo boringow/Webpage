@@ -26,7 +26,7 @@
 			margin-bottom:0px;
 			background:#281801;
 			font-family: 'Roboto Mono', sans-serif;
-			font-size:12px;
+			font-size:2vmin;
 			color:#e08a34;
 			/*linear-gradient(90deg, #333333,#3f4e59);*/
 		}
@@ -36,17 +36,47 @@
 			margin:10px auto 10px auto;
 		}
 
-		p1{
-			font-size:2.7vmin;
+		h2{
+			font-size: 18px;
 		}
 
-		#quote{
-			font-size:2.4vmin;
+		p{
+			font-size:14px;
 		}
 
-		#presentation_flex {
-			display: flex;
-			flex-direction: column;
+		ul{
+			margin:0;
+			padding:0px 5px 5px 15px;
+		}
+
+		li{
+			font-size:14px;
+		}
+
+		.CV{
+			margin:10px 35% 10px 35%;
+			text-align: center;
+			width: 30%;			
+		}
+
+		a{
+			color:#f4a250;
+			text-decoration: none;
+			font-size: 14px;
+		}
+		a:visited {
+			color:#f47450;
+			text-decoration: none;
+			font-size: 14px;
+		}
+		a:focus {
+			color:#f47450;
+			text-decoration: none;
+			font-size: 14px;
+		}
+
+		.presentation{
+			text-align: center;
 		}
 
 		#introduction_quote{
@@ -104,6 +134,10 @@
 			border-radius: 20px;
 		}
 
+		.icon{
+			font-size: 28px;
+		}
+
 		.boxes{
 			display:flex;
 			flex-wrap: wrap;
@@ -114,7 +148,9 @@
 			min-width:25vw;
 			margin-left:15px;
 			margin-right:10px;
+			margin-bottom:20px;
 		}
+
 
 
 	</style>
@@ -130,45 +166,86 @@
 
 	<!-- Initialize Firebase -->
 	<script src="/__/firebase/init.js"></script>
-	<div id=presentation_wrapper>	
-		<br>
+	<div class="menu">
+		<ul>
+			<li><a href="./Index.html"> <i class="fas fa-home"></i></a></li>
+			<li><a href="./Blog.html">Blog</a></li>
+			<li><a href="./Memories.html">Memories</a></li>
+			<li><a href="./Information.html" id="current">Information</a></li>
+		</ul>
 	</div>
-	<div id="presentation_flex">
-		<div class="menu">
-			<ul>
-			  <li><a href="./Index.html"> <i class="fas fa-home"></i></a></li>
-			  <li><a href="./Blog.html">Blog</a></li>
-			  <li><a href="./Memories.html">Memories</a></li>
-			  <li><a href="./Information.html" id="current">Information</a></li>
-			</ul>
+	<div class="container">
+		<div class="presentation">
+			<p>You can download my CV here:</p>
+			<div class="CV">
+			<a href="./media/CV-BorinKaduk-ENG.pdf" target="blank">
+				<div><p class="icon"><i class="fa-solid fa-file-lines"></i></p>Borin Kaduk Aguilar </div>
+			</a>
+			</div>
 		</div>
-		<div class="container">
-			<div class="boxes">
-				<div class="box">
-					<p class="icon"><i class="fa-solid fa-people-roof"></i></p>
-					<h2>Family</h2>
-					Thinking in Systems, Donella H. Meadows.
-				</div>
-				<div class="box">
-					<p class="icon"><i class="fa-regular fa-thumbs-up"></i></p>
-					<h2>Interests</h2>
-					Aviation, Yoga, Chess, Flying, Artistic Gymnastics, Meditation and gardening.
-				</div>
-				<div class="box">
-					<p class="icon"><i class="fa-solid fa-heart"></i></p>
-					<h2>Faviourites</h2>
-					<a href="https://www.youtube.com/watch?v=Z_lgOwrtl2M" target="blank">MADLY - The Blaze</a>
-				</div>
-				<div class="box">
-					<p class="icon"><i class="fa-solid fa-bullseye"></i></p>
-					<h2>Goals and aspirations</h2>
-					
-				</div>
-				<div class="box">
-					<p class="icon"><i class="fa-solid fa-bucket"></i></p>
-					<h2>Bucket List</h2>
-					
-				</div>
+	</div>
+	<div class="container">
+		<div class="boxes">
+			<div class="box">
+				<p class="icon"><i class="fa-solid fa-people-roof"></i></p>
+				<h2>Family</h2>
+				<p>
+					<b> Brother: </b> Enin, 24 - DevOps engineer<br>
+					<b> Sister: </b> Arani, 26 - Private banking advisor<br>
+					<b> Father: </b> David, 53 - Draughtsman<br>
+					<b> Mohter: </b> Rosa, 50 - Project technician<br>
+				</p>
+			</div>
+			<div class="box">
+				<p class="icon"><i class="fa-regular fa-thumbs-up"></i></p>
+				<h2>Interests</h2>
+				<p>
+					<i class="fa-solid fa-plane-departure"></i> Aviation<br>
+					<i class="fa-solid fa-om"></i> Yoga<br>
+					<i class="fa-solid fa-chess-bishop"></i> Chess<br>
+					<i class="fa-solid fa-dumbbell"></i> Artistic Gymnastics <br>
+					<i class="fa-solid fa-person-praying"></i> Meditation<br>
+					<i class="fa-solid fa-seedling"></i> Gardening
+				</p>
+			</div>
+			<div class="box">
+				<p class="icon"><i class="fa-solid fa-heart"></i></p>
+				<h2>Favourites</h2>
+				<p>
+					<b> Song: </b>
+					<a href="https://www.youtube.com/watch?v=Z_lgOwrtl2M" target="blank">MADLY - The Blaze</a><br>
+					<b> Movie: </b>
+					Ciudade do Deus<br>
+					<b> Food: </b>
+					Bread <br>
+					<b> Painting: </b>
+					Wanderer above the sea of fog</p>
+				</p>
+			</div>
+			<div class="box">
+				<p class="icon"><i class="fa-solid fa-bullseye"></i></p>
+				<h2>Goals and aspirations</h2>
+				<ul>
+					<li>Enhance the European Air Traffic Management systems </li>
+					<li>Have a positive impact on people surrounding me </li>
+					<li>Avoid inaction at all costs, it's better to fail and try again rather than never trying  </li>
+					<li>Put consciousness in my day to day activities </li>
+				</ul>
+			</div>
+			<div class="box">
+				<p class="icon"><i class="fa-solid fa-bucket"></i></p>
+				<h2>Bucket List</h2>
+				<p>
+					<i class="fa-regular fa-square"></i> Travel solo outside Europe <br>
+					<i class="fa-regular fa-square"></i> Get a masters degree <br>
+					<i class="fa-regular fa-square"></i> Obtain the private pilot's license <br>
+					<i class="fa-regular fa-square-check"></i> Skydive <br>
+					<i class="fa-regular fa-square"></i> Learn scuba diving <br>
+					<i class="fa-regular fa-square-check"></i> Ride a unicycle <br>
+					<i class="fa-regular fa-square-check"></i> Do a backflip <br>
+					<i class="fa-regular fa-square"></i> Plant a tree <br>
+					<i class="fa-regular fa-square"></i> Join a cooking course <br>
+				</p>
 			</div>
 		</div>
 	</div>
