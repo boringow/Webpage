@@ -27,6 +27,7 @@
             transition: background-color 0.3s ease;
         }
 
+        /* Menu navigation */
         .menu {
             display: flex;
             justify-content: center;
@@ -49,37 +50,14 @@
             font-size: 20px;
             padding: 10px 15px;
             transition: color 0.3s ease, background-color 0.3s ease;
+			border-radius: 5px;
         }
 
         .menu li a:hover, .menu li a#current {
             color: #63331dbc;
             background-color: #f4a250;
-            border-radius: 5px;
-        }
-
-        /* Styles for the video background */
-        #presentation_flex {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #e08a34;
-            background-color: #281801;
-            overflow: hidden;
-        }
-
-        #myVideo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
-            filter: brightness(50%);
-            object-fit: cover;
-        }
+			border-radius: 5px;
+         }
 
         #introduction_quote {
             z-index: 1;
@@ -114,28 +92,22 @@
     <script src="/__/firebase/8.4.2/firebase-app.js"></script>
     <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
     <script src="/__/firebase/init.js"></script>
-
-    <div id="presentation_flex">
-        <video autoplay muted loop id="myVideo">
-            <source src="./media/webapp_video.mp4" type="video/mp4">
-        </video>
-
-        <div class="menu">
+    <div class="menu">
             <ul>
                 <li><a href="./index.html" id="current"><i class="fas fa-home"></i></a></li>
                 <li><a href="./Blog.html">Blog</a></li>
                 <li><a href="./Memories.html">Memories</a></li>
                 <li><a href="./Information.html">Information</a></li>
             </ul>
-        </div>
+    </div>
 
-        <div id="introduction_quote">
+        
+	<div id="introduction_quote">
             <h1 id="Welcome_message">Welcome bystander,</h1>
             <p1>Hope you enjoy my website</p1>
             <br><br><br>
             <p1 id="quote"><i>I would rather be ashes than dust,<br> I would rather be a meteor than a sleepy and permanent planet.<br>
                 The function of man is to live, not to exist.<br>- Jack London</i></p1>
-        </div>
     </div>
 </body>
 </html>
