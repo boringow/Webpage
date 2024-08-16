@@ -1,154 +1,141 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borin's Website</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Include the same styles as in your original design */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<html>
-  <head>
-	<title>Borin's website</title>
-	<link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./media/favicon-16x16.png">
-	<link rel="manifest" href="./media/site.webmanifest">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<!-- Font types -->
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital@1&family=Roboto+Mono&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-	<link rel='stylesheet' href='./css/style.css'>
-	<style>
-		html {
-			scroll-behavior: smooth;
-  		}
+        body {
+            font-family: 'Roboto Mono', sans-serif;
+            background-color: #281801;
+            color: #e08a34;
+            line-height: 1.8;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
 
-  
-		body{
-			margin-top:0px;
-			margin-left:0px;
-			margin-right:0px;
-			margin-bottom:0px;
-			background:#fac57a;
-			font-family: 'Roboto Mono', sans-serif;
-			font-size:12px;
-			color:#e08a34;
-			/*linear-gradient(90deg, #333333,#3f4e59);*/
-		}
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            background-color: #f4a250bc;
+            border-radius: 8px;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
 
-		#Welcome_message{
-			font-size: 3vmin;
-			margin:10px auto 10px auto;
-		}
+        .menu ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
 
-		p1{
-			font-size:2.7vmin;
-		}
+        .menu li a {
+            color: #63331dbc;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
 
-		#quote{
-			font-size:2.4vmin;
-		}
+        .menu li a:hover, .menu li a#current {
+            color: #63331dbc;
+            background-color: #f4a250;
+            border-radius: 5px;
+        }
 
-		#presentation_flex {
-			display: flex;
-			flex-direction: column;
-		}
+        /* Styles for the video background */
+        #presentation_flex {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #e08a34;
+            background-color: #281801;
+            overflow: hidden;
+        }
 
-		#introduction_quote{
-			display: block;
-			align-self: flex-start;
-			margin: 150px 12px auto 62vw;
-			z-index: 1;
-		}
+        #myVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            filter: brightness(50%);
+            object-fit: cover;
+        }
 
-		.menu {
-			margin: auto;
-			position: sticky;
-			width: 80%;
-			top: 0;
-			color: #fff;
-			padding: 10px;
-			border-radius: 10px;
-		}
+        #introduction_quote {
+            z-index: 1;
+            max-width: 700px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
 
-		/* Style for the menu items */
-		.menu ul {
-			display:flex;
-			flex-direction: row;
-			justify-content: center;
-			align-content: stretch;
-			list-style-type: none;
-			margin: 0px;
-			padding: 0px;
-		}
+        #Welcome_message {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-		.menu li {
-			display: inline-block;
-			border-radius: 20px;
-			background-color: #f4a250bc;
-			margin: 10px;
-		}
+        p1 {
+            font-size: 1.5rem;
+            color: #e08a34;
+        }
 
-		.menu li a {
-			display: block;
-			object-fit: contain;
-			color: #63331dbc;
-			text-align: center;
-			text-decoration: none;
-			font-size: 2.8vmin;
-			padding: 5px 15px;
-		}
+        #quote {
+            margin-top: 30px;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
 
-		.menu li a:hover {
-			background-color: #8a3232b2;
-			border-radius: 20px;
-		}
+    </style>
+</head>
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.4.2/firebase-app.js"></script>
+    <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
 
-		#current{
-			color: #63331d;
-			background-color: #f4a250;
-			border-radius: 20px;
-		}
+    <div id="presentation_flex">
+        <video autoplay muted loop id="myVideo">
+            <source src="./media/webapp_video.mp4" type="video/mp4">
+        </video>
 
-		#myVideo {
-			position: fixed;
-			right: 0;
-			bottom: 0;
+        <div class="menu">
+            <ul>
+                <li><a href="./index.html" id="current"><i class="fas fa-home"></i></a></li>
+                <li><a href="./Blog.html">Blog</a></li>
+                <li><a href="./Memories.html">Memories</a></li>
+                <li><a href="./Information.html">Information</a></li>
+            </ul>
+        </div>
 
-			min-width: 50%;
-			min-height: 50%;
-			transform: translateX(calc((100% - 100vw) / 2));
-		}
-
-	</style>
-	<script src="https://kit.fontawesome.com/9494322ed3.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="/__/firebase/8.4.2/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-	<script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
-
-	<!-- Initialize Firebase -->
-	<script src="/__/firebase/init.js"></script>
-	<div id="presentation_flex">
-		<video autoplay muted loop id="myVideo">
-			<source src="./media/webapp_video.mp4" type="video/mp4">
-		</video>
-		<div class="menu">
-			<ul>
-			  <li><a href="./index.html" id="current"> <i class="fas fa-home"></i></a></li>
-			  <li><a href="./Blog.html">Blog</a></li>
-			  <li><a href="./Memories.html">Memories</a></li>
-			  <li><a href="./Information.html">Information</a></li>
-			</ul>
-		</div>
-		<div id="introduction_quote">
-			<h1 id="Welcome_message">Welcome bystander,</h1>
-			<p1>Hope you enjoy my website </p1>
-			<br>
-			<br>
-			<br>
-			<p1 id="quote"><i>I would rather be ashes than dust,<br> I would rather be a meteor than a sleepy and permanent planet.<br>
-				The function of man is to live, not to exist.<br>-Jack London</i></p1>
-		</div>
-	</div>
-	</body>
+        <div id="introduction_quote">
+            <h1 id="Welcome_message">Welcome bystander,</h1>
+            <p1>Hope you enjoy my website</p1>
+            <br><br><br>
+            <p1 id="quote"><i>I would rather be ashes than dust,<br> I would rather be a meteor than a sleepy and permanent planet.<br>
+                The function of man is to live, not to exist.<br>- Jack London</i></p1>
+        </div>
+    </div>
+</body>
 </html>
