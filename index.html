@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* Include the same styles as in your original design */
         * {
             margin: 0;
             padding: 0;
@@ -20,71 +19,340 @@
 
         body {
             font-family: 'Roboto Mono', sans-serif;
-            background-color: #281801;
-            color: #e08a34;
+            background-color: #e0e0e0;
+            color: #333;
             line-height: 1.8;
             font-size: 18px;
-            transition: background-color 0.3s ease;
         }
 
         /* Menu navigation */
         .menu {
             display: flex;
             justify-content: center;
-            margin-bottom: 40px;
-            background-color: #f4a250bc;
-            border-radius: 8px;
-            padding: 15px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ddd;
+            margin: 0; /* Remove default margin */
         }
 
         .menu ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+        }
+
+        .menu li {
+            margin: 0;
         }
 
         .menu li a {
-            color: #63331dbc;
+            color: #333;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 18px;
             padding: 10px 15px;
-            transition: color 0.3s ease, background-color 0.3s ease;
-			border-radius: 5px;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            line-height: 1; /* Ensure consistent vertical alignment */
+            text-align: center; /* Center text horizontally */
         }
 
         .menu li a:hover, .menu li a#current {
-            color: #63331dbc;
-            background-color: #f4a250;
-			border-radius: 5px;
-         }
+            color: #fff;
+            background-color: #ff5722;
+        }
 
+        /* Main content */
         #introduction_quote {
-            z-index: 1;
-            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 60px); /* Adjust height for menu */
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto; /* Center content horizontally */
         }
 
         #Welcome_message {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 3rem;
             margin-bottom: 20px;
+            color: #ff5722;
         }
 
-        p1 {
-            font-size: 1.5rem;
-            color: #e08a34;
+        p {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 10px 0;
         }
 
         #quote {
-            margin-top: 30px;
+            margin-top: 20px;
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            color: #666;
+        }
+		
+		
+	  .shape {
+		position: absolute;
+		animation: move1 20s infinite ease-in-out;
+	  }
+
+	  .circle {
+		width: 100px;
+		height: 100px;
+		background: #E63946;
+		border-radius: 50%;
+		top: 10%;
+		left: 20%;
+		animation: move1 20s infinite ease-in-out;
+	  }
+
+	  .polygon {
+		width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-bottom: 100px solid #F4A261;
+		top: 50%;
+		left: 40%;
+		animation: move2 22s infinite ease-in-out;
+	  }
+
+	  .string {
+		width: 3px;
+		height: 200px;
+		background: #2A9D8F;
+		top: 70%;
+		left: 60%;
+		animation: move3 25s infinite ease-in-out;
+	  }
+
+	  @keyframes move1 {
+		0% {
+		  transform: translateY(0) translateX(0) rotate(0deg);
+		  opacity: 1;
+		}
+		25% {
+		  transform: translateY(-10vh) translateX(5vw) rotate(45deg);
+		  opacity: 0.9;
+		}
+		50% {
+		  transform: translateY(10vh) translateX(-5vw) rotate(90deg);
+		  opacity: 0.7;
+		}
+		75% {
+		  transform: translateY(-15vh) translateX(10vw) rotate(270deg);
+		  opacity: 0.5;
+		}
+		100% {
+		  transform: translateY(0) translateX(0) rotate(360deg);
+		  opacity: 1;
+		}
+	  }
+
+	  @keyframes move2 {
+		0% {
+		  transform: translateY(0) translateX(0) rotate(0deg);
+		  opacity: 1;
+		}
+		25% {
+		  transform: translateY(-5vh) translateX(10vw) rotate(-60deg);
+		  opacity: 0.8;
+		}
+		50% {
+		  transform: translateY(15vh) translateX(-15vw) rotate(-120deg);
+		  opacity: 0.6;
+		}
+		75% {
+		  transform: translateY(-10vh) translateX(20vw) rotate(120deg);
+		  opacity: 0.4;
+		}
+		100% {
+		  transform: translateY(0) translateX(0) rotate(360deg);
+		  opacity: 1;
+		}
+	  }
+
+	  @keyframes move3 {
+		0% {
+		  transform: translateY(0) translateX(0) rotate(0deg);
+		  opacity: 1;
+		}
+		25% {
+		  transform: translateY(5vh) translateX(-10vw) rotate(30deg);
+		  opacity: 0.9;
+		}
+		50% {
+		  transform: translateY(-20vh) translateX(20vw) rotate(-30deg);
+		  opacity: 0.7;
+		}
+		75% {
+		  transform: translateY(10vh) translateX(-15vw) rotate(60deg);
+		  opacity: 0.5;
+		}
+		100% {
+		  transform: translateY(0) translateX(0) rotate(360deg);
+		  opacity: 1;
+		}
+	  }
+
+	  /* Additional shapes */
+	  .circle2 {
+		width: 150px;
+		height: 150px;
+		background: #264653;
+		border-radius: 50%;
+		top: 30%;
+		left: 70%;
+		animation: move4 23s infinite ease-in-out;
+	  }
+
+	  .polygon2 {
+		width: 0;
+		height: 0;
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		border-bottom: 60px solid #E9C46A;
+		top: 80%;
+		left: 30%;
+		animation: move5 26s infinite ease-in-out;
+	  }
+
+	  .string2 {
+		width: 3px;
+		height: 300px;
+		background: #457B9D;
+		top: 40%;
+		left: 50%;
+		animation: move6 28s infinite ease-in-out;
+	  }
+
+	  @keyframes move4 {
+		0% {
+		  transform: translateY(0) translateX(0) rotate(0deg);
+		  opacity: 1;
+		}
+		25% {
+		  transform: translateY(-15vh) translateX(10vw) rotate(-45deg);
+		  opacity: 0.9;
+		}
+		50% {
+		  transform: translateY(20vh) translateX(-10vw) rotate(-90deg);
+		  opacity: 0.7;
+		}
+		75% {
+		  transform: translateY(-10vh) translateX(15vw) rotate(180deg);
+		  opacity: 0.5;
+		}
+		100% {
+		  transform: translateY(0) translateX(0) rotate(360deg);
+		  opacity: 1;
+		}
+	  }
+
+	  @keyframes move5 {
+		0% {
+		  transform: translateY(0) translateX(0) rotate(0deg);
+		  opacity: 1;
+		}
+		25% {
+		  transform: translateY(10vh) translateX(-10vw) rotate(15deg);
+		  opacity: 0.8;
+		}
+		50% {
+		  transform: translateY(-10vh) translateX(20vw) rotate(60deg);
+		  opacity: 0.6;
+		}
+		75% {
+		  transform: translateY(15vh) translateX(-15vw) rotate(-120deg);
+		  opacity: 0.4;
+		}
+		100% {
+		  transform: translateY(0) translateX(0) rotate(360deg);
+		  opacity: 1;
+		}
+	  }
+
+	  @keyframes move6 {
+		0% {
+		  transform: translateY(0) translateX(0) rotate(0deg);
+		  opacity: 1;
+		}
+		25% {
+		  transform: translateY(-10vh) translateX(10vw) rotate(-15deg);
+		  opacity: 0.9;
+		}
+		50% {
+		  transform: translateY(15vh) translateX(-5vw) rotate(45deg);
+		  opacity: 0.7;
+		}
+		75% {
+		  transform: translateY(-20vh) translateX(15vw) rotate(-60deg);
+		  opacity: 0.5;
+		}
+		100% {
+		  transform: translateY(0) translateX(0) rotate(360deg);
+		  opacity: 1;
+		}
+	  }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu ul {
+                gap: 15px;
+            }
+
+            .menu li a {
+                font-size: 16px;
+                padding: 8px 12px;
+            }
+
+            #Welcome_message {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            #quote {
+                font-size: 0.9rem;
+            }
         }
 
+        @media (max-width: 480px) {
+            .menu ul {
+                gap: 10px;
+            }
+
+            .menu li a {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+
+            #Welcome_message {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            #quote {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,22 +360,28 @@
     <script src="/__/firebase/8.4.2/firebase-app.js"></script>
     <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
     <script src="/__/firebase/init.js"></script>
-    <div class="menu">
-            <ul>
-                <li><a href="./index.html" id="current"><i class="fas fa-home"></i></a></li>
-                <li><a href="./Blog.html">Blog</a></li>
-                <li><a href="./Memories.html">Memories</a></li>
-                <li><a href="./Information.html">Information</a></li>
-            </ul>
-    </div>
 
-        
-	<div id="introduction_quote">
-            <h1 id="Welcome_message">Welcome bystander,</h1>
-            <p1>Hope you enjoy my website</p1>
-            <br><br><br>
-            <p1 id="quote"><i>I would rather be ashes than dust,<br> I would rather be a meteor than a sleepy and permanent planet.<br>
-                The function of man is to live, not to exist.<br>- Jack London</i></p1>
+    <div class="menu">
+        <ul>
+            <li><a href="./index.html" id="current"><i class="fas fa-home"></i></a></li>
+            <li><a href="./Blog.html">Blog</a></li>
+            <li><a href="./Memories.html">Memories</a></li>
+            <li><a href="./Information.html">Information</a></li>
+        </ul>
+    </div>
+	<div class="shape circle"></div>
+	<div class="shape polygon"></div>
+	<div class="shape string"></div>
+
+	<div class="shape circle2"></div>
+	<div class="shape polygon2"></div>
+	<div class="shape string2"></div>
+
+    <div id="introduction_quote">
+        <h1 id="Welcome_message">Welcome bystander,</h1>
+        <p>Hope you enjoy my website</p>
+        <p id="quote"><i>I would rather be ashes than dust,<br> I would rather be a meteor than a sleepy and permanent planet.<br>
+            The function of man is to live, not to exist.<br>- Jack London</i></p>
     </div>
 </body>
 </html>

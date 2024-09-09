@@ -11,148 +11,208 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* Resetting default margins and paddings */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* Resetting default margins and paddings */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Roboto Mono', sans-serif;
-            background-color: #281801;
-            color: #e08a34;
-            line-height: 1.8;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-        }
+    body {
+        font-family: 'Roboto Mono', sans-serif;
+        background-color: #f0f0f0; /* Light background color for contrast */
+        color: #333; /* Dark text for readability */
+        line-height: 1.8;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
 
-        /* Container for centered layout */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    /* Container for centered layout */
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        .header h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 4rem;
-            color: #333;
-            letter-spacing: 1.5px;
-        }
+    .header h1 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 4rem;
+        color: #333; /* Dark text for the header */
+        letter-spacing: 1.5px;
+    }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
 
-        /* Menu navigation */
-        .menu {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            background-color: #f4a250bc;
-            border-radius: 8px;
-            padding: 15px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
+    /* Menu navigation */
+	.menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #f5f5f5;
+		padding: 10px 0;
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+		border-bottom: 2px solid #ddd;
+		margin: 0; /* Remove default margin */
+	}
 
-        .menu ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
+	.menu ul {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 20px;
+	}
 
-        .menu li a {
-            color: #63331dbc;
-            text-decoration: none;
-            font-size: 20px;
-            padding: 10px 15px;
-            transition: color 0.3s ease, background-color 0.3s ease;
-        }
+	.menu li {
+		margin: 0;
+	}
 
-        .menu li a:hover, .menu li a#current {
-            color: #63331dbc;
-            background-color: #f4a250;
-            border-radius: 5px;
-        }
+	.menu li a {
+		color: #333;
+		text-decoration: none;
+		font-size: 18px;
+		padding: 10px 15px;
+		display: block;
+		border-radius: 4px;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		line-height: 1; /* Ensure consistent vertical alignment */
+		text-align: center; /* Center text horizontally */
+	}
 
-        /* Presentation section */
-        .presentation {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+	.menu li a:hover, .menu li a#current {
+		color: #fff;
+		background-color: #ff5722;
+	}
 
-        .presentation p {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
+    /* Presentation section */
+    .presentation {
+        text-align: center;
+        margin-bottom: 50px;
+    }
 
-        .presentation .CV {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #f4a250bc;
-            color: #281801;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 20px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+    .presentation p {
+        font-size: 18px; /* Adjusted font size */
+        margin-bottom: 20px;
+        color: #666; /* Medium grey for presentation text */
+    }
 
-        .presentation .CV:hover {
-            background-color: #f4a250;
-            transform: translateY(-5px);
-        }
+    .presentation .CV {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #ff5722; /* Vibrant orange */
+        color: #fff; /* White text */
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 18px; /* Adjusted font size */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
 
-        /* Box grid layout */
-        .boxes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
+    .presentation .CV:hover {
+        background-color: #e64a19; /* Slightly darker orange */
+        transform: translateY(-5px);
+    }
 
-        .box {
-            background-color: #f4a250bc;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
+    /* Box grid layout */
+    .boxes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px; /* Reduced gap */
+    }
 
-        .box:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transform: translateY(-5px);
-        }
+    .box {
+        background-color: #ffffff; /* White background for boxes */
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
 
-        .box .icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-            color: #281801;
-        }
+    .box:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+    }
 
-        .box h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #281801;
-        }
+    .box .icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+        color: #ff5722; /* Vibrant orange for icons */
+    }
 
-        .box p, .box ul {
-            color: #281801;
-            font-size: 18px;
-            text-align: left;
-        }
+    .box h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #333; /* Dark text for headings */
+    }
 
-        .box a {
-            color: #281801;;
-            text-decoration: underline;
-            transition: color 0.3s ease;
-        }
+    .box p, .box ul {
+        color: #666; /* Medium grey for text */
+        font-size: 18px;
+        text-align: left;
+    }
 
-        .box a:hover {
-            color: #000;
-        }
-    </style>
+    .box a {
+        color: #ff5722; /* Vibrant orange for links */
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .box a:hover {
+        color: #e64a19; /* Slightly darker orange on hover */
+    }
+	
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.menu ul {
+			gap: 15px;
+		}
+
+		.menu li a {
+			font-size: 16px;
+			padding: 8px 12px;
+		}
+
+		#Welcome_message {
+			font-size: 2.5rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+
+		#quote {
+			font-size: 0.9rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.menu ul {
+			gap: 10px;
+		}
+
+		.menu li a {
+			font-size: 14px;
+			padding: 6px 10px;
+		}
+
+		#Welcome_message {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 0.9rem;
+		}
+
+		#quote {
+			font-size: 0.8rem;
+		}
+	}
+</style>
 </head>
 <body>
     <nav class="menu">

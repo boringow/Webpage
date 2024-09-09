@@ -14,238 +14,219 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link rel='stylesheet' href='./css/style.css'>
 	<style>
-		html {
-			scroll-behavior: smooth;
-  		}
+    html {
+        scroll-behavior: smooth;
+    }
 
-  
-		body{
-			margin-top:0px;
-			margin-left:0px;
-			margin-right:0px;
-			margin-bottom:0px;
-			background:#2a2013;
-			font-family: 'Roboto Mono', sans-serif;
-			font-size: 12px;/*2.5vmin;*/
-			color:#f4a250;
-		}
+    body {
+        margin: 0;
+        background: #f5f5f5; /* Light background for better contrast */
+        font-family: 'Roboto Mono', sans-serif;
+        font-size: 12px; /* Adjusted font size */
+        color: #333; /* Dark text for readability */
+    }
 
-		h1{
-			font-size: 20px;
-			align-self: flex-start;
-			flex-grow: 1;
-			margin-left: 10vw;
-		}
+    h1 {
+        font-size: 20px;
+        align-self: flex-start;
+        flex-grow: 1;
+        margin-left: 10vw;
+        color: #444; /* Dark grey for headings */
+    }
 
-		h2{
-			font-size:16px;
-			color: #e6743b;
-			top:5px;
-			bottom:5px;
-		}
+    h2 {
+        font-size: 16px;
+        color: #e64a19; /* Warm orange for secondary headings */
+        margin: 5px 0;
+    }
 
-		p1{
-			display:block;
-			font-size:12px;
-			align-self: self-end;
-			flex-grow: 2;
-			margin-left: 30vw;
-			margin-right: 10vw;
-			margin-top: 5vw;
-		}
+    p1 {
+        display: block;
+        font-size: 12px;
+        align-self: self-end;
+        flex-grow: 2;
+        margin: 5vw 10vw;
+        color: #666; /* Medium grey for paragraph text */
+    }
 
-		a{
-			color:#f4a250;
-		}
-		a:visited {
-			color:#f47450;
-		}
-		a:focus {
-			color:#f47450;
-		}
+    a {
+        color: #ff5722; /* Vibrant orange for links */
+    }
+    a:visited {
+        color: #e64a19; /* Slightly darker orange for visited links */
+    }
+    a:focus {
+        color: #e64a19; /* Slightly darker orange for focused links */
+    }
 
+    #presentation_flex {
+        display: flex;
+        flex-direction: column;
+    }
 
-		#presentation_flex {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#Blog_presentation{
-			display: block;
-			align-self: center;
-			z-index: 1;
-			margin:15px;
-		}
-
-		.menu {
-			margin: auto;
-			width: 80%;
-			top: 0;
-			color: #fff;
-			padding: 10px;
-			border-radius: 10px;
-			z-index: 2;
-		}
-
-		/* Style for the menu items */
-		.menu ul {
-			display:flex;
-			flex-direction: row;
-			justify-content: center;
-			align-content: stretch;
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-
-		.menu li {
-			display: inline-block;
-			border-radius: 20px;
-			background-color: #f4a250bc;
-			margin: 10px;
-		}
-
-		.menu li a {
-			display: block;
-			object-fit: contain;
-			color: #63331dbc;
-			text-align: center;
-			text-decoration: none;
-			font-size: 2.8vmin;
-			padding: 5px 15px;
-		}
-
-		.menu li a:hover {
-			background-color: #8a3232b2;
-			border-radius: 20px;
-		}
-
-		#current{
-			color: #63331d;
-			background-color: #f4a250;
-			border-radius: 20px;
-		}
-
-		.timeline {
-			margin: 20px auto;
-			padding: 20px;
-		}
-
-		.card {
-			position: relative;
-			max-width: 60vw;
-			min-width: 50vw;
-			/*max-width: 400px;*/
-		}
-
-		/* setting padding based on even or odd */
-		.card:nth-child(odd) {
-			padding: 30px 0 30px 30px;
-		}
-		.card:nth-child(even) {
-			padding: 30px 30px 30px 0;
-		}
-		/* Global ::before */
-		.card::before {
-			content: "";
-			position: absolute;
-			width: 50%;
-			border: solid #f4a250;
-		}
-
-		/* Setting the border of top, bottom, left */
-		.card:nth-child(odd)::before {
-			left: 0px;
-			top: -5px;
-			bottom: -5px;
-			border-width: 5px 0 5px 5px;
-			border-radius: 50px 0 0 50px;
-		}
+    #Blog_presentation {
+        display: block;
+        align-self: center;
+        z-index: 1;
+        margin: 15px;
+    }
 
 
-		/* Setting the border of top, bottom, right */
-		.card:nth-child(even)::before {
-			right: 0;
-			top: 0;
-			bottom: 0;
-			border-width: 5px 5px 5px 0;
-			border-radius: 0 50px 50px 0;
-		}
+    /* Menu navigation */
+	.menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #f5f5f5;
+		padding: 10px 0;
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+		border-bottom: 2px solid #ddd;
+		margin: 0; /* Remove default margin */
+	}
 
-		/* Removing the border if it is the first card */
-		.card:first-child::before {
-			border-top: 0;
-			border-top-left-radius: 0;
-		}
+	.menu ul {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		gap: 20px;
+	}
 
-		/* Removing the border if it is the last card  and it's odd */
-		.card:last-child:nth-child(odd)::before {
-			border-bottom: 0;
-			border-bottom-left-radius: 0;
-		}
+	.menu li {
+		margin: 0;
+	}
 
-		/* Removing the border if it is the last card  and it's even */
-		.card:last-child:nth-child(even)::before {
-			border-bottom: 0;
-			border-bottom-right-radius: 0;
-		}
+	.menu li a {
+		color: #333;
+		text-decoration: none;
+		font-size: 18px;
+		padding: 10px 15px;
+		display: block;
+		border-radius: 4px;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		line-height: 1; /* Ensure consistent vertical alignment */
+		text-align: center; /* Center text horizontally */
+	}
 
-		/* Information about the timeline */
-		.info {
-			display: flex;
-			flex-direction: column;
-			/*background: #333;*/
-			color: rgb(172, 153, 140);
-			border-radius: 10px;
-			padding: 10px;
-		}
-
-		/* Title of the card */
-		.title {
-			color: #f55708;
-			font-size: 18px;
-			position: relative;
-			margin-top:5px;
-			margin-bottom: 5px;
-		}
-
-		/* Timeline dot  */
-		.title::before {
-			content: "";
-			position: absolute;
-			width: 10px;
-			height: 10px;
-			background: white;
-			border-radius: 999px;
-			border: 3px solid #f4a250;
-		}
-
-		/* text right if the card is even  */
-		.card:nth-child(even) > .info > .title {
-			text-align: right;
-		}
-
-		/* text right if the card is even  */
-		.card:nth-child(even) > .info > h2 {
-			text-align: right;
-		}
-
-		.card:nth-child(even) > .info > p {
-			text-align: right;
-		}
-
-		/* setting dot to the left if the card is odd */
-		.card:nth-child(odd) > .info > .title::before {
-			left: -45px;
-		}
-
-		/* setting dot to the right if the card is odd */
-		.card:nth-child(even) > .info > .title::before {
-			right: -45px;
-		}
+	.menu li a:hover, .menu li a#current {
+		color: #fff;
+		background-color: #ff5722;
+	}
 
 
+    .timeline {
+        margin: 20px auto;
+        padding: 20px;
+    }
 
+    .card {
+        position: relative;
+        max-width: 60vw;
+        min-width: 50vw;
+    }
+
+    /* Setting padding based on even or odd */
+    .card:nth-child(odd) {
+        padding: 30px 0 30px 30px;
+    }
+    .card:nth-child(even) {
+        padding: 30px 30px 30px 0;
+    }
+    /* Global ::before */
+    .card::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        border: solid #ff5722; /* Vibrant orange for borders */
+    }
+
+    /* Setting the border of top, bottom, left */
+    .card:nth-child(odd)::before {
+        left: 0;
+        top: -5px;
+        bottom: -5px;
+        border-width: 5px 0 5px 5px;
+        border-radius: 50px 0 0 50px;
+    }
+
+    /* Setting the border of top, bottom, right */
+    .card:nth-child(even)::before {
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-width: 5px 5px 5px 0;
+        border-radius: 0 50px 50px 0;
+    }
+
+    /* Removing the border if it is the first card */
+    .card:first-child::before {
+        border-top: 0;
+        border-top-left-radius: 0;
+    }
+
+    /* Removing the border if it is the last card  and it's odd */
+    .card:last-child:nth-child(odd)::before {
+        border-bottom: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    /* Removing the border if it is the last card  and it's even */
+    .card:last-child:nth-child(even)::before {
+        border-bottom: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    /* Information about the timeline */
+    .info {
+        display: flex;
+        flex-direction: column;
+        color: #666; /* Medium grey for info text */
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    /* Title of the card */
+    .title {
+        color: #ff5722; /* Vibrant orange for titles */
+        font-size: 18px;
+        position: relative;
+        margin: 5px 0;
+    }
+
+    /* Timeline dot  */
+    .title::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #fff; /* White for the dot */
+        border-radius: 999px;
+        border: 3px solid #ff5722; /* Vibrant orange for the dot border */
+    }
+
+    /* Text alignment for even and odd cards */
+    .card:nth-child(even) > .info > .title {
+        text-align: right;
+    }
+
+    .card:nth-child(even) > .info > h2 {
+        text-align: right;
+    }
+
+    .card:nth-child(even) > .info > p {
+        text-align: right;
+    }
+
+    /* Positioning the dot */
+    .card:nth-child(odd) > .info > .title::before {
+        left: -45px;
+    }
+
+    .card:nth-child(even) > .info > .title::before {
+        right: -45px;
+    }
 
 	</style>
 	<script src="https://kit.fontawesome.com/9494322ed3.js" crossorigin="anonymous"></script>

@@ -24,10 +24,10 @@
 			margin-left:0px;
 			margin-right:0px;
 			margin-bottom:0px;
-			background:#281801;
+			background:#f5f5f5;
 			font-family: 'Roboto Mono', sans-serif;
 			font-size:12px;
-			color:#e08a34;
+			color:#fff;
 			/*linear-gradient(90deg, #333333,#3f4e59);*/
 		}
 
@@ -42,52 +42,47 @@
 		}
 
 
+		/* Menu navigation */
 		.menu {
-			margin: auto;
-			width: 80%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #f5f5f5;
+			padding: 10px 0;
+			position: sticky;
 			top: 0;
-			color: #fff;
-			padding: 5px;
-			border-radius: 10px;
+			z-index: 1000;
+			border-bottom: 2px solid #ddd;
+			margin: 0; /* Remove default margin */
 		}
 
-		/* Style for the menu items */
 		.menu ul {
-			display:flex;
-			flex-direction: row;
-			justify-content: center;
-			align-content: stretch;
-			list-style-type: none;
-			margin: 0;
+			display: flex;
+			list-style: none;
 			padding: 0;
+			margin: 0;
+			gap: 20px;
 		}
 
 		.menu li {
-			display: inline-block;
-			border-radius: 20px;
-			margin: 10px;
-			background-color: #f4a250bc;
+			margin: 0;
 		}
 
 		.menu li a {
-			display: block;
-			object-fit: contain;
-			color: #63331dbc;
-			text-align: center;
+			color: #333;
 			text-decoration: none;
-			font-size: 2.8vmin;
-			padding: 5px 15px;
+			font-size: 18px;
+			padding: 10px 15px;
+			display: block;
+			border-radius: 4px;
+			transition: background-color 0.3s ease, color 0.3s ease;
+			line-height: 1; /* Ensure consistent vertical alignment */
+			text-align: center; /* Center text horizontally */
 		}
 
-		.menu li a:hover {
-			background-color: #8a3232b2;
-			border-radius: 20px;
-		}
-
-		#current{
-			color: #63331d;
-			background-color: #f4a250;
-			border-radius: 20px;
+		.menu li a:hover, .menu li a#current {
+			color: #fff;
+			background-color: #ff5722;
 		}
 
 		.ggallery {
